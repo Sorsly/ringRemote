@@ -1476,6 +1476,9 @@ You are welcome to use this library for commercial purposes. For attribution, we
 to match capacitance</text>
 <text x="157.48" y="86.36" size="1.778" layer="97" align="bottom-right">alternatively, use this osc circuit for atblc only
 and use nanoring oscillator for max32660</text>
+<text x="101.6" y="58.42" size="1.27" layer="97" align="bottom-right">all gpio for max
+can be reconfigured
+to be interrupt pins</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -1685,32 +1688,73 @@ and use nanoring oscillator for max32660</text>
 <pinref part="D1" gate="G$1" pin="A"/>
 </segment>
 </net>
-<net name="UART_RTS" class="0">
+<net name="BT_RTS" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="LP_GPIO_9"/>
 <wire x1="213.36" y1="129.54" x2="215.9" y2="129.54" width="0.1524" layer="91"/>
 <label x="215.9" y="129.54" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART0_CTS"/>
+<wire x1="76.2" y1="81.28" x2="78.74" y2="81.28" width="0.1524" layer="91"/>
+<label x="78.74" y="81.28" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
-<net name="UART_CTS" class="0">
+<net name="BT_CTS" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="LP_GPIO_8"/>
 <wire x1="213.36" y1="127" x2="215.9" y2="127" width="0.1524" layer="91"/>
 <label x="215.9" y="127" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART0_RTS"/>
+<wire x1="76.2" y1="78.74" x2="78.74" y2="78.74" width="0.1524" layer="91"/>
+<label x="78.74" y="78.74" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
-<net name="UART_TXD" class="0">
+<net name="BT_TXD" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="LP_GPIO_3"/>
 <wire x1="213.36" y1="114.3" x2="215.9" y2="114.3" width="0.1524" layer="91"/>
 <label x="215.9" y="114.3" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART0_RX"/>
+<wire x1="76.2" y1="83.82" x2="78.74" y2="83.82" width="0.1524" layer="91"/>
+<label x="78.74" y="83.82" size="1.27" layer="95" xref="yes"/>
+</segment>
 </net>
-<net name="UART_RXD" class="0">
+<net name="BT_RXD" class="0">
 <segment>
 <pinref part="U$2" gate="G$1" pin="LP_GPIO_2"/>
 <wire x1="213.36" y1="111.76" x2="215.9" y2="111.76" width="0.1524" layer="91"/>
 <label x="215.9" y="111.76" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="UART0_TX"/>
+<wire x1="76.2" y1="86.36" x2="78.74" y2="86.36" width="0.1524" layer="91"/>
+<label x="78.74" y="86.36" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="WAKEMONITOR" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.10"/>
+<wire x1="76.2" y1="73.66" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
+<label x="78.74" y="73.66" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="C_EN" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.11"/>
+<wire x1="76.2" y1="71.12" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
+<label x="78.74" y="71.12" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="AO_GPIO_0_WAKE" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.12"/>
+<wire x1="76.2" y1="68.58" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
+<label x="78.74" y="68.58" size="1.27" layer="95" xref="yes"/>
 </segment>
 </net>
 </nets>

@@ -506,6 +506,7 @@ design rules under a new name.</description>
 <element name="C4" library="ringRemote" package="0201" value="0.1uF" x="-109.22" y="-25.4"/>
 <element name="C5" library="ringRemote" package="0201" value="1uF" x="-109.22" y="-29.21"/>
 <element name="C6" library="ringRemote" package="0201" value="1uF" x="-109.22" y="-33.02"/>
+<element name="R3" library="ringRemote" package="0201" value="100k" x="-109.22" y="-36.83"/>
 </elements>
 <signals>
 <signal name="N$2">
@@ -542,6 +543,7 @@ design rules under a new name.</description>
 <contactref element="U$2" pad="P$11"/>
 <contactref element="U$2" pad="P$35"/>
 <contactref element="U$2" pad="P$26"/>
+<contactref element="D1" pad="C"/>
 <wire x1="-109.22" y1="-29.485" x2="-109.22" y2="-33.295" width="0" layer="19" extent="1-1"/>
 <wire x1="-109.22" y1="-25.675" x2="-109.22" y2="-29.485" width="0" layer="19" extent="1-1"/>
 <wire x1="-108.5875" y1="-21.5555" x2="-109.22" y2="-25.675" width="0" layer="19" extent="1-1"/>
@@ -550,7 +552,8 @@ design rules under a new name.</description>
 <wire x1="-40.64" y1="11.155" x2="-103.2185" y2="-14.5155" width="0" layer="19" extent="1-1"/>
 <wire x1="-36.83" y1="11.155" x2="-40.64" y2="11.155" width="0" layer="19" extent="1-1"/>
 <wire x1="-30.48" y1="11.155" x2="-36.83" y2="11.155" width="0" layer="19" extent="1-1"/>
-<wire x1="-15.24" y1="18.055" x2="-30.48" y2="11.155" width="0" layer="19" extent="1-1"/>
+<wire x1="-21.983" y1="16.51" x2="-30.48" y2="11.155" width="0" layer="19" extent="1-1"/>
+<wire x1="-15.24" y1="18.055" x2="-21.983" y2="16.51" width="0" layer="19" extent="1-1"/>
 <wire x1="-2" y1="-20.51" x2="-15.24" y2="18.055" width="0" layer="19" extent="1-1"/>
 <wire x1="0" y1="-21.76" x2="-2" y2="-20.51" width="0" layer="19" extent="1-1"/>
 </signal>
@@ -579,6 +582,16 @@ design rules under a new name.</description>
 <contactref element="R2" pad="2"/>
 <wire x1="-103.2185" y1="-16.9555" x2="-109.22" y2="-25.125" width="0" layer="19" extent="1-1"/>
 <wire x1="-19.05" y1="17.505" x2="-103.2185" y2="-16.9555" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$3">
+<contactref element="U$1" pad="P$3"/>
+<contactref element="R3" pad="1"/>
+<wire x1="-2" y1="-22.51" x2="-109.22" y2="-36.555" width="0" layer="19" extent="1-1"/>
+</signal>
+<signal name="N$5">
+<contactref element="R3" pad="2"/>
+<contactref element="D1" pad="A"/>
+<wire x1="-23.737" y1="16.51" x2="-109.22" y2="-37.105" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>

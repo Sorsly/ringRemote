@@ -1,0 +1,28 @@
+!ringRemote todos
+
+!!general
+
+*add a connector to interface with ring
+**likely microusb (small enough?)
+**functions
+***programming
+****might be able to program atblc via host mcu, so only need to be able to program host mcu
+***charging
+
+*choose some pins for pushbuttons
+**assume only 4 buttons req rn
+*determine interconnect for pushbuttons
+**eg wires? another connector?
+
+
+!!power
+
+*add battery supervisor
+
+*likely create a battery charge circuit as a separate device (save package
+space, should be rarely used if battery life is good)
+**stretch goal is to incorporate an energy harvest mechanism
+
+!!mech
+
+*cad a packaging

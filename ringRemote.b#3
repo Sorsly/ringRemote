@@ -591,17 +591,25 @@ design rules under a new name.</description>
 <contactref element="D1" pad="A"/>
 <wire x1="-23.737" y1="16.51" x2="-109.22" y2="-37.105" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="UART_RTS">
+<signal name="BT_RTS">
 <contactref element="U$2" pad="P$21"/>
+<contactref element="U$1" pad="P$16"/>
+<wire x1="-4" y1="-19.26" x2="-110.7215" y2="-19.8175" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="UART_CTS">
+<signal name="BT_CTS">
 <contactref element="U$2" pad="P$20"/>
+<contactref element="U$1" pad="P$15"/>
+<wire x1="-3.25" y1="-18.51" x2="-110.7215" y2="-19.2075" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="UART_TXD">
+<signal name="BT_TXD">
 <contactref element="U$2" pad="P$15"/>
+<contactref element="U$1" pad="P$17"/>
+<wire x1="-4" y1="-19.885" x2="-110.7215" y2="-16.1575" width="0" layer="19" extent="1-1"/>
 </signal>
-<signal name="UART_RXD">
+<signal name="BT_RXD">
 <contactref element="U$2" pad="P$14"/>
+<contactref element="U$1" pad="P$18"/>
+<wire x1="-4" y1="-20.51" x2="-110.7215" y2="-15.5475" width="0" layer="19" extent="1-1"/>
 </signal>
 </signals>
 </board>
