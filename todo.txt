@@ -18,9 +18,14 @@
 !!power
 
 *add battery supervisor
+**according to graph on datasheet of chosen battery (ML-621S), full capacity is exhausted at ~2.25V. choosing supervisor based on this.
+**nanopower line of supervisors from maxim: 23 suffix is ideal (2.313V nom)
+***actually, expensive. found a cheaper one thats smaller too, slightly more
+power. tps3839g25
 
 *likely create a battery charge circuit as a separate device (save package
 space, should be rarely used if battery life is good)
+**edit: the charging guide for hte battery I chose is saying I can just use a regulator, resistor, and diode. might put it on the ring after all
 **stretch goal is to incorporate an energy harvest mechanism
 
 !!mech

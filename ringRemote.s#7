@@ -1446,14 +1446,12 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="Y1" library="ringRemote" deviceset="CRYSTAL-32.768KHZ" device="SMD-3.2X1.5" value="32.768kHz"/>
 <part name="C1" library="ringRemote" deviceset="CAPACITOR" device="" value="10uF"/>
 <part name="C2" library="ringRemote" deviceset="CAPACITOR" device="" value="1uF"/>
-<part name="R1" library="ringRemote" deviceset="RESISTOR" device="" value="100k"/>
 <part name="R2" library="ringRemote" deviceset="RESISTOR" device="" value="100k"/>
 <part name="C3" library="ringRemote" deviceset="CAPACITOR" device="" value="1uF"/>
 <part name="GND1" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND2" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="U$1" library="ringRemote" deviceset="MAX32660" device=""/>
 <part name="U$2" library="ringRemote" deviceset="ATBTLC1000-ZR110CA" device=""/>
-<part name="GND3" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND4" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND5" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND6" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
@@ -1461,7 +1459,6 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="SUPPLY2" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VBAT"/>
 <part name="SUPPLY3" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VDDIO"/>
 <part name="C4" library="ringRemote" deviceset="CAPACITOR" device="" value="0.1uF"/>
-<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VDDIO"/>
 <part name="C5" library="ringRemote" deviceset="CAPACITOR" device="" value="1uF"/>
 <part name="C6" library="ringRemote" deviceset="CAPACITOR" device="" value="1uF"/>
 <part name="GND7" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
@@ -1497,14 +1494,12 @@ wakemonitor needs to be irq</text>
 <attribute name="NAME" x="47.244" y="53.721" size="1.778" layer="95" font="vector" align="bottom-right"/>
 <attribute name="VALUE" x="47.244" y="48.641" size="1.778" layer="96" font="vector" align="bottom-right"/>
 </instance>
-<instance part="R1" gate="G$1" x="124.46" y="139.7"/>
-<instance part="R2" gate="G$1" x="220.98" y="109.22"/>
+<instance part="R2" gate="G$1" x="215.9" y="104.14" rot="R270"/>
 <instance part="C3" gate="G$1" x="43.18" y="109.22"/>
 <instance part="GND1" gate="G$1" x="43.18" y="101.6"/>
 <instance part="GND2" gate="G$1" x="53.34" y="45.72"/>
 <instance part="U$1" gate="G$1" x="53.34" y="78.74"/>
 <instance part="U$2" gate="G$1" x="175.26" y="121.92"/>
-<instance part="GND3" gate="G$1" x="119.38" y="134.62"/>
 <instance part="GND4" gate="G$1" x="167.64" y="88.9"/>
 <instance part="GND5" gate="G$1" x="165.1" y="149.86"/>
 <instance part="GND6" gate="G$1" x="185.42" y="149.86"/>
@@ -1512,7 +1507,6 @@ wakemonitor needs to be irq</text>
 <instance part="SUPPLY2" gate="G$1" x="170.18" y="165.1"/>
 <instance part="SUPPLY3" gate="G$1" x="180.34" y="165.1"/>
 <instance part="C4" gate="G$1" x="185.42" y="157.48"/>
-<instance part="SUPPLY4" gate="G$1" x="233.68" y="109.22"/>
 <instance part="C5" gate="G$1" x="114.3" y="104.14" smashed="yes" rot="R270">
 <attribute name="NAME" x="117.221" y="105.156" size="1.778" layer="95" font="vector" rot="R270" align="bottom-right"/>
 <attribute name="VALUE" x="112.141" y="105.156" size="1.778" layer="96" font="vector" rot="R270" align="bottom-right"/>
@@ -1577,11 +1571,6 @@ wakemonitor needs to be irq</text>
 <wire x1="43.18" y1="106.68" x2="43.18" y2="104.14" width="0.1524" layer="91"/>
 </segment>
 <segment>
-<pinref part="R1" gate="G$1" pin="1"/>
-<pinref part="GND3" gate="G$1" pin="3.3V"/>
-<wire x1="119.38" y1="139.7" x2="119.38" y2="137.16" width="0.1524" layer="91"/>
-</segment>
-<segment>
 <pinref part="C1" gate="G$1" pin="2"/>
 <pinref part="GND5" gate="G$1" pin="3.3V"/>
 <wire x1="165.1" y1="154.94" x2="165.1" y2="152.4" width="0.1524" layer="91"/>
@@ -1619,13 +1608,6 @@ wakemonitor needs to be irq</text>
 <pinref part="D1" gate="G$1" pin="C"/>
 <pinref part="GND9" gate="G$1" pin="3.3V"/>
 <wire x1="78.74" y1="45.72" x2="78.74" y2="48.26" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="AO_GPIO_0"/>
-<pinref part="R1" gate="G$1" pin="2"/>
-<wire x1="137.16" y1="139.7" x2="129.54" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -1668,12 +1650,6 @@ wakemonitor needs to be irq</text>
 <wire x1="180.34" y1="165.1" x2="177.8" y2="165.1" width="0.1524" layer="91"/>
 <wire x1="177.8" y1="165.1" x2="177.8" y2="147.32" width="0.1524" layer="91"/>
 <junction x="180.34" y="165.1"/>
-</segment>
-<segment>
-<pinref part="R2" gate="G$1" pin="2"/>
-<pinref part="SUPPLY4" gate="G$1" pin="VCC"/>
-<wire x1="226.06" y1="109.22" x2="233.68" y2="109.22" width="0.1524" layer="91"/>
-<label x="226.06" y="106.68" size="1.778" layer="95"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -1743,6 +1719,11 @@ wakemonitor needs to be irq</text>
 <wire x1="76.2" y1="73.66" x2="78.74" y2="73.66" width="0.1524" layer="91"/>
 <label x="78.74" y="73.66" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="GPIO_MS1"/>
+<wire x1="137.16" y1="119.38" x2="134.62" y2="119.38" width="0.1524" layer="91"/>
+<label x="134.62" y="119.38" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
 </net>
 <net name="C_EN" class="0">
 <segment>
@@ -1750,12 +1731,22 @@ wakemonitor needs to be irq</text>
 <wire x1="76.2" y1="71.12" x2="78.74" y2="71.12" width="0.1524" layer="91"/>
 <label x="78.74" y="71.12" size="1.27" layer="95" xref="yes"/>
 </segment>
+<segment>
+<pinref part="R2" gate="G$1" pin="2"/>
+<wire x1="215.9" y1="99.06" x2="215.9" y2="96.52" width="0.1524" layer="91"/>
+<label x="215.9" y="96.52" size="1.27" layer="95" rot="R270" xref="yes"/>
+</segment>
 </net>
 <net name="AO_GPIO_0_WAKE" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="P0.12"/>
 <wire x1="76.2" y1="68.58" x2="78.74" y2="68.58" width="0.1524" layer="91"/>
 <label x="78.74" y="68.58" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$2" gate="G$1" pin="AO_GPIO_0"/>
+<wire x1="137.16" y1="139.7" x2="134.62" y2="139.7" width="0.1524" layer="91"/>
+<label x="134.62" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
