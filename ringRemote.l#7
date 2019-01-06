@@ -24,9 +24,9 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="1" visible="no" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="31" name="tCream" color="7" fill="1" visible="yes" active="yes"/>
+<layer number="31" name="tCream" color="7" fill="1" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="33" name="tFinish" color="6" fill="3" visible="no" active="no"/>
 <layer number="34" name="bFinish" color="6" fill="6" visible="no" active="no"/>
@@ -700,7 +700,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <text x="0" y="-1.27" size="0.8128" layer="27" align="center">&gt;value</text>
 </package>
 <package name="ATBTLC1000-ZR110CA">
-<smd name="P$36" x="0" y="0" dx="2.705" dy="2.705" layer="1"/>
+<smd name="P$35" x="0" y="0" dx="2.705" dy="2.705" layer="1"/>
 <wire x1="-4.0415" y1="-3.7755" x2="-4.0415" y2="6.7655" width="0.127" layer="51"/>
 <wire x1="-4.0415" y1="6.7655" x2="3.4615" y2="6.7655" width="0.127" layer="51"/>
 <wire x1="3.4615" y1="6.7655" x2="3.4615" y2="-3.7755" width="0.127" layer="51"/>
@@ -716,30 +716,29 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <smd name="P$9" x="3.4615" y="2.0445" dx="1.016" dy="0.406" layer="1"/>
 <smd name="P$10" x="3.4615" y="2.6545" dx="1.016" dy="0.406" layer="1"/>
 <smd name="P$11" x="3.4615" y="3.2645" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$12" x="3.4615" y="3.8745" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$13" x="-4.0415" y="3.4525" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$14" x="-4.0415" y="2.8425" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$15" x="-4.0415" y="2.2325" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$16" x="-4.0415" y="1.6225" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$17" x="-4.0415" y="1.0125" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$18" x="-4.0415" y="0.4025" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$19" x="-4.0415" y="-0.2075" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$20" x="-4.0415" y="-0.8175" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$21" x="-4.0415" y="-1.4275" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$22" x="-4.0415" y="-2.0375" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$23" x="-4.0415" y="-2.6475" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$24" x="-4.0415" y="-3.2575" dx="1.016" dy="0.406" layer="1"/>
-<smd name="P$25" x="-3.1275" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$26" x="-2.5175" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$27" x="-1.9075" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$28" x="-1.2975" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$29" x="-0.6875" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$30" x="-0.0775" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$31" x="0.5325" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$32" x="1.1425" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$33" x="1.7525" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$34" x="2.3625" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
-<smd name="P$35" x="2.9725" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$12" x="-4.0415" y="3.4525" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$13" x="-4.0415" y="2.8425" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$14" x="-4.0415" y="2.2325" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$15" x="-4.0415" y="1.6225" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$16" x="-4.0415" y="1.0125" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$17" x="-4.0415" y="0.4025" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$18" x="-4.0415" y="-0.2075" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$19" x="-4.0415" y="-0.8175" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$20" x="-4.0415" y="-1.4275" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$21" x="-4.0415" y="-2.0375" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$22" x="-4.0415" y="-2.6475" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$23" x="-4.0415" y="-3.2575" dx="1.016" dy="0.406" layer="1"/>
+<smd name="P$24" x="-3.1275" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$25" x="-2.5175" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$26" x="-1.9075" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$27" x="-1.2975" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$28" x="-0.6875" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$29" x="-0.0775" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$30" x="0.5325" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$31" x="1.1425" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$32" x="1.7525" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$33" x="2.3625" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
+<smd name="P$34" x="2.9725" y="-3.7755" dx="0.406" dy="1.016" layer="1"/>
 </package>
 <package name="T2044+5C">
 <smd name="P$0" x="0" y="0" dx="2.8" dy="2.8" layer="1"/>
@@ -868,11 +867,11 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="P0.12" x="22.86" y="-10.16" length="middle" rot="R180"/>
 <pin name="P0.13" x="22.86" y="-12.7" length="middle" rot="R180"/>
 <pin name="RSTN" x="22.86" y="12.7" length="middle" rot="R180"/>
-<pin name="VSS" x="0" y="-20.32" length="middle" rot="R90"/>
-<pin name="32KOUT" x="-22.86" y="0" length="middle"/>
-<pin name="32KIN" x="-22.86" y="-5.08" length="middle"/>
-<pin name="VDD" x="0" y="20.32" length="middle" rot="R270"/>
-<pin name="VCORE" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="VSS" x="0" y="-20.32" length="middle" direction="pwr" rot="R90"/>
+<pin name="32KOUT" x="-22.86" y="0" length="middle" direction="out"/>
+<pin name="32KIN" x="-22.86" y="-5.08" length="middle" direction="in"/>
+<pin name="VDD" x="0" y="20.32" length="middle" direction="pwr" rot="R270"/>
+<pin name="VCORE" x="-5.08" y="-20.32" length="middle" direction="pwr" rot="R90"/>
 <pin name="P0.11" x="22.86" y="-7.62" length="middle" rot="R180"/>
 <pin name="P0.10" x="22.86" y="-5.08" length="middle" rot="R180"/>
 <pin name="SWDCLKALT" x="-22.86" y="7.62" length="middle"/>
@@ -883,8 +882,50 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="UART0_TX" x="22.86" y="7.62" length="middle" rot="R180"/>
 <pin name="P0.3" x="-22.86" y="-10.16" length="middle"/>
 <pin name="P0.2" x="-22.86" y="-12.7" length="middle"/>
-<pin name="EP" x="5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="EP" x="5.08" y="-20.32" length="middle" direction="pwr" rot="R90"/>
 <text x="-17.78" y="15.24" size="1.27" layer="95">&gt;NAME</text>
+</symbol>
+<symbol name="ATBTLC1000">
+<wire x1="-33.02" y1="20.32" x2="-33.02" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="-33.02" y1="-17.78" x2="33.02" y2="-17.78" width="0.254" layer="94"/>
+<wire x1="33.02" y1="-17.78" x2="33.02" y2="20.32" width="0.254" layer="94"/>
+<wire x1="33.02" y1="20.32" x2="-33.02" y2="20.32" width="0.254" layer="94"/>
+<pin name="AO_GPIO_0" x="-38.1" y="17.78" length="middle"/>
+<pin name="AO_GPIO_1" x="-38.1" y="15.24" length="middle"/>
+<pin name="AO_GPIO_2" x="-38.1" y="12.7" length="middle"/>
+<pin name="LP_GPIO_14" x="-38.1" y="10.16" length="middle"/>
+<pin name="LP_GPIO_15" x="-38.1" y="7.62" length="middle"/>
+<pin name="LP_GPIO_16" x="-38.1" y="5.08" length="middle"/>
+<pin name="LP_GPIO_17" x="-38.1" y="2.54" length="middle"/>
+<pin name="LP_GPIO_18" x="-38.1" y="0" length="middle"/>
+<pin name="GPIO_MS1" x="-38.1" y="-2.54" length="middle"/>
+<pin name="GPIO_MS2" x="-38.1" y="-5.08" length="middle"/>
+<pin name="GPIO_MS3" x="-38.1" y="-7.62" length="middle"/>
+<pin name="GPIO_MS4" x="-38.1" y="-10.16" length="middle"/>
+<pin name="RTC_CLK_P" x="-38.1" y="-12.7" length="middle"/>
+<pin name="RTC_CLK_N" x="-38.1" y="-15.24" length="middle"/>
+<pin name="VBAT" x="-2.54" y="25.4" length="middle" direction="pwr" rot="R270"/>
+<pin name="GND1" x="-12.7" y="-22.86" length="middle" direction="pwr" rot="R90"/>
+<pin name="GND2" x="-10.16" y="-22.86" length="middle" direction="pwr" rot="R90"/>
+<pin name="PADDLE" x="-7.62" y="-22.86" length="middle" direction="pwr" rot="R90"/>
+<pin name="VDDIO_SW" x="0" y="-22.86" length="middle" rot="R90"/>
+<pin name="SWCLK" x="12.7" y="-22.86" length="middle" rot="R90"/>
+<pin name="SWDIO" x="15.24" y="-22.86" length="middle" rot="R90"/>
+<pin name="CHIP_EN" x="38.1" y="-12.7" length="middle" rot="R180"/>
+<pin name="LP_GPIO_2" x="38.1" y="-10.16" length="middle" rot="R180"/>
+<pin name="LP_GPIO_3" x="38.1" y="-7.62" length="middle" rot="R180"/>
+<pin name="LP_GPIO_4" x="38.1" y="-5.08" length="middle" rot="R180"/>
+<pin name="LP_GPIO_5" x="38.1" y="-2.54" length="middle" rot="R180"/>
+<pin name="LP_GPIO_6" x="38.1" y="0" length="middle" rot="R180"/>
+<pin name="LP_GPIO_7" x="38.1" y="2.54" length="middle" rot="R180"/>
+<pin name="LP_GPIO_8" x="38.1" y="5.08" length="middle" rot="R180"/>
+<pin name="LP_GPIO_9" x="38.1" y="7.62" length="middle" rot="R180"/>
+<pin name="LP_GPIO_10" x="38.1" y="10.16" length="middle" rot="R180"/>
+<pin name="LP_GPIO_11" x="38.1" y="12.7" length="middle" rot="R180"/>
+<pin name="LP_GPIO_12" x="38.1" y="15.24" length="middle" rot="R180"/>
+<pin name="LP_GPIO_13" x="38.1" y="17.78" length="middle" rot="R180"/>
+<pin name="VDDIO" x="2.54" y="25.4" length="middle" direction="pwr" rot="R270"/>
+<text x="-33.02" y="20.32" size="1.27" layer="95">&gt;name</text>
 </symbol>
 </symbols>
 <devicesets>
@@ -1245,9 +1286,47 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 </deviceset>
 <deviceset name="ATBTLC1000-ZR110CA">
 <gates>
+<gate name="G$1" symbol="ATBTLC1000" x="0" y="0"/>
 </gates>
 <devices>
-<device name="">
+<device name="" package="ATBTLC1000-ZR110CA">
+<connects>
+<connect gate="G$1" pin="AO_GPIO_0" pad="P$1"/>
+<connect gate="G$1" pin="AO_GPIO_1" pad="P$2"/>
+<connect gate="G$1" pin="AO_GPIO_2" pad="P$3"/>
+<connect gate="G$1" pin="CHIP_EN" pad="P$30"/>
+<connect gate="G$1" pin="GND1" pad="P$11"/>
+<connect gate="G$1" pin="GND2" pad="P$26"/>
+<connect gate="G$1" pin="GPIO_MS1" pad="P$28"/>
+<connect gate="G$1" pin="GPIO_MS2" pad="P$29"/>
+<connect gate="G$1" pin="GPIO_MS3" pad="P$31"/>
+<connect gate="G$1" pin="GPIO_MS4" pad="P$32"/>
+<connect gate="G$1" pin="LP_GPIO_10" pad="P$22"/>
+<connect gate="G$1" pin="LP_GPIO_11" pad="P$23"/>
+<connect gate="G$1" pin="LP_GPIO_12" pad="P$24"/>
+<connect gate="G$1" pin="LP_GPIO_13" pad="P$25"/>
+<connect gate="G$1" pin="LP_GPIO_14" pad="P$4"/>
+<connect gate="G$1" pin="LP_GPIO_15" pad="P$5"/>
+<connect gate="G$1" pin="LP_GPIO_16" pad="P$6"/>
+<connect gate="G$1" pin="LP_GPIO_17" pad="P$8"/>
+<connect gate="G$1" pin="LP_GPIO_18" pad="P$9"/>
+<connect gate="G$1" pin="LP_GPIO_2" pad="P$14"/>
+<connect gate="G$1" pin="LP_GPIO_3" pad="P$15"/>
+<connect gate="G$1" pin="LP_GPIO_4" pad="P$16"/>
+<connect gate="G$1" pin="LP_GPIO_5" pad="P$17"/>
+<connect gate="G$1" pin="LP_GPIO_6" pad="P$18"/>
+<connect gate="G$1" pin="LP_GPIO_7" pad="P$19"/>
+<connect gate="G$1" pin="LP_GPIO_8" pad="P$20"/>
+<connect gate="G$1" pin="LP_GPIO_9" pad="P$21"/>
+<connect gate="G$1" pin="PADDLE" pad="P$35"/>
+<connect gate="G$1" pin="RTC_CLK_N" pad="P$34"/>
+<connect gate="G$1" pin="RTC_CLK_P" pad="P$33"/>
+<connect gate="G$1" pin="SWCLK" pad="P$12"/>
+<connect gate="G$1" pin="SWDIO" pad="P$13"/>
+<connect gate="G$1" pin="VBAT" pad="P$27"/>
+<connect gate="G$1" pin="VDDIO" pad="P$7"/>
+<connect gate="G$1" pin="VDDIO_SW" pad="P$10"/>
+</connects>
 <technologies>
 <technology name=""/>
 </technologies>

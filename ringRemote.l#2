@@ -24,7 +24,7 @@
 <layer number="26" name="bNames" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="27" name="tValues" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="28" name="bValues" color="7" fill="1" visible="yes" active="yes"/>
-<layer number="29" name="tStop" color="7" fill="1" visible="no" active="yes"/>
+<layer number="29" name="tStop" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="30" name="bStop" color="7" fill="1" visible="yes" active="yes"/>
 <layer number="31" name="tCream" color="7" fill="1" visible="no" active="yes"/>
 <layer number="32" name="bCream" color="7" fill="1" visible="yes" active="yes"/>
@@ -763,6 +763,16 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <smd name="P$19" x="-2" y="-0.625" dx="0.8" dy="0.3" layer="1"/>
 <smd name="P$20" x="-2" y="-1.25" dx="0.8" dy="0.3" layer="1"/>
 </package>
+<package name="3-SOT-23">
+<smd name="P$1" x="-1.05" y="0.95" dx="1.3" dy="0.6" layer="1"/>
+<smd name="P$2" x="-1.05" y="-0.95" dx="1.3" dy="0.6" layer="1"/>
+<smd name="P$3" x="1.05" y="0" dx="1.3" dy="0.6" layer="1"/>
+<wire x1="-0.7" y1="1.52" x2="0.7" y2="1.52" width="0.127" layer="21"/>
+<wire x1="0.7" y1="1.52" x2="0.7" y2="-1.52" width="0.127" layer="21"/>
+<wire x1="0.7" y1="-1.52" x2="-0.7" y2="-1.52" width="0.127" layer="21"/>
+<wire x1="-0.7" y1="-1.52" x2="-0.7" y2="1.52" width="0.127" layer="21"/>
+<text x="-1.5" y="2" size="0.8128" layer="25">&gt;name</text>
+</package>
 </packages>
 <symbols>
 <symbol name="MICROCHIP_PIC12F1501-I-MS_0_0">
@@ -867,11 +877,11 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="P0.12" x="22.86" y="-10.16" length="middle" rot="R180"/>
 <pin name="P0.13" x="22.86" y="-12.7" length="middle" rot="R180"/>
 <pin name="RSTN" x="22.86" y="12.7" length="middle" rot="R180"/>
-<pin name="VSS" x="0" y="-20.32" length="middle" rot="R90"/>
-<pin name="32KOUT" x="-22.86" y="0" length="middle"/>
-<pin name="32KIN" x="-22.86" y="-5.08" length="middle"/>
-<pin name="VDD" x="0" y="20.32" length="middle" rot="R270"/>
-<pin name="VCORE" x="-5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="VSS" x="0" y="-20.32" length="middle" direction="pwr" rot="R90"/>
+<pin name="32KOUT" x="-22.86" y="0" length="middle" direction="out"/>
+<pin name="32KIN" x="-22.86" y="-5.08" length="middle" direction="in"/>
+<pin name="VDD" x="0" y="20.32" length="middle" direction="pwr" rot="R270"/>
+<pin name="VCORE" x="-5.08" y="-20.32" length="middle" direction="pwr" rot="R90"/>
 <pin name="P0.11" x="22.86" y="-7.62" length="middle" rot="R180"/>
 <pin name="P0.10" x="22.86" y="-5.08" length="middle" rot="R180"/>
 <pin name="SWDCLKALT" x="-22.86" y="7.62" length="middle"/>
@@ -882,7 +892,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="UART0_TX" x="22.86" y="7.62" length="middle" rot="R180"/>
 <pin name="P0.3" x="-22.86" y="-10.16" length="middle"/>
 <pin name="P0.2" x="-22.86" y="-12.7" length="middle"/>
-<pin name="EP" x="5.08" y="-20.32" length="middle" rot="R90"/>
+<pin name="EP" x="5.08" y="-20.32" length="middle" direction="pwr" rot="R90"/>
 <text x="-17.78" y="15.24" size="1.27" layer="95">&gt;NAME</text>
 </symbol>
 <symbol name="ATBTLC1000">
@@ -902,7 +912,7 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="GPIO_MS2" x="-38.1" y="-5.08" length="middle"/>
 <pin name="GPIO_MS3" x="-38.1" y="-7.62" length="middle"/>
 <pin name="GPIO_MS4" x="-38.1" y="-10.16" length="middle"/>
-<pin name="RTC_CLK_P" x="-38.1" y="-12.7" length="middle"/>
+<pin name="RTC_CLK_P" x="-38.1" y="-12.7" length="middle" direction="in"/>
 <pin name="RTC_CLK_N" x="-38.1" y="-15.24" length="middle"/>
 <pin name="VBAT" x="-2.54" y="25.4" length="middle" direction="pwr" rot="R270"/>
 <pin name="GND1" x="-12.7" y="-22.86" length="middle" direction="pwr" rot="R90"/>
@@ -926,6 +936,15 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <pin name="LP_GPIO_13" x="38.1" y="17.78" length="middle" rot="R180"/>
 <pin name="VDDIO" x="2.54" y="25.4" length="middle" direction="pwr" rot="R270"/>
 <text x="-33.02" y="20.32" size="1.27" layer="95">&gt;name</text>
+</symbol>
+<symbol name="TPS3839">
+<wire x1="-7.62" y1="7.62" x2="-7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="-7.62" y1="-7.62" x2="7.62" y2="-7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="-7.62" x2="7.62" y2="7.62" width="0.254" layer="94"/>
+<wire x1="7.62" y1="7.62" x2="-7.62" y2="7.62" width="0.254" layer="94"/>
+<pin name="VDD" x="-5.08" y="10.16" length="short" direction="pwr" rot="R270"/>
+<pin name="GND" x="-5.08" y="-10.16" length="short" direction="pwr" rot="R90"/>
+<pin name="!RESET" x="10.16" y="0" length="short" direction="out" rot="R180"/>
 </symbol>
 </symbols>
 <devicesets>
@@ -1362,6 +1381,17 @@ Commonly used for small ceramic capacitors. Like our 0.1uF (http://www.sparkfun.
 <connect gate="G$1" pin="VDD" pad="P$9"/>
 <connect gate="G$1" pin="VSS" pad="P$6"/>
 </connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+<deviceset name="TPS3839">
+<gates>
+</gates>
+<devices>
+<device name="" package="3-SOT-23">
 <technologies>
 <technology name=""/>
 </technologies>

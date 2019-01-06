@@ -1469,7 +1469,7 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <sheets>
 <sheet>
 <plain>
-<text x="119.38" y="116.84" size="1.778" layer="97" align="bottom-right">need to calculate c5 and c6
+<text x="109.22" y="116.84" size="1.778" layer="97" align="bottom-right">need to calculate c5 and c6
 to match capacitance</text>
 <text x="157.48" y="86.36" size="1.778" layer="97" align="bottom-right">alternatively, use this osc circuit for atblc only
 and use nanoring oscillator for max32660</text>
@@ -1477,6 +1477,10 @@ and use nanoring oscillator for max32660</text>
 can be reconfigured
 to be interrupt pins.
 wakemonitor needs to be irq</text>
+<text x="111.76" y="124.46" size="1.27" layer="97" align="bottom-right">so apparently there are internal caps
+for tuning the crystal osc, so...
+can I be lazy and not include
+c5 and c6?</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>

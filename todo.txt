@@ -26,6 +26,7 @@ power. tps3839g25
 *likely create a battery charge circuit as a separate device (save package
 space, should be rarely used if battery life is good)
 **edit: the charging guide for hte battery I chose is saying I can just use a regulator, resistor, and diode. might put it on the ring after all
+***depending on space constraints and efficiency, may opt for a pmic again.
 **stretch goal is to incorporate an energy harvest mechanism
 
 !!mech

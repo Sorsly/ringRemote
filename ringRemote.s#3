@@ -1473,6 +1473,10 @@ You are welcome to use this library for commercial purposes. For attribution, we
 <part name="GND10" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND11" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
 <part name="GND12" library="SparkFun-PowerSymbols" deviceset="GND2" device=""/>
+<part name="SUPPLY4" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VBAT"/>
+<part name="SUPPLY5" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VBAT"/>
+<part name="SUPPLY6" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VBAT"/>
+<part name="SUPPLY7" library="SparkFun-PowerSymbols" deviceset="VCC" device="" value="VBAT"/>
 </parts>
 <sheets>
 <sheet>
@@ -1489,6 +1493,12 @@ wakemonitor needs to be irq</text>
 for tuning the crystal osc, so...
 can I be lazy and not include
 c5 and c6?</text>
+<text x="50.8" y="30.48" size="1.27" layer="97" align="bottom-right">not adding a sch part,
+but there are hypothetical
+switches here. will probably
+create some vias with some conductive
+filament under (as carrier) then pot
+with conductive glue</text>
 </plain>
 <instances>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
@@ -1539,6 +1549,10 @@ c5 and c6?</text>
 <instance part="GND10" gate="G$1" x="38.1" y="48.26"/>
 <instance part="GND11" gate="G$1" x="38.1" y="66.04"/>
 <instance part="GND12" gate="G$1" x="50.8" y="63.5"/>
+<instance part="SUPPLY4" gate="G$1" x="38.1" y="76.2"/>
+<instance part="SUPPLY5" gate="G$1" x="50.8" y="73.66"/>
+<instance part="SUPPLY6" gate="G$1" x="38.1" y="58.42"/>
+<instance part="SUPPLY7" gate="G$1" x="50.8" y="55.88"/>
 </instances>
 <busses>
 </busses>

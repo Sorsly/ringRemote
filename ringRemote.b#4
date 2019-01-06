@@ -611,6 +611,15 @@ design rules under a new name.</description>
 <contactref element="U$1" pad="P$18"/>
 <wire x1="-4" y1="-20.51" x2="-110.7215" y2="-15.5475" width="0" layer="19" extent="1-1"/>
 </signal>
+<signal name="WAKEMONITOR">
+<contactref element="U$1" pad="P$14"/>
+</signal>
+<signal name="C_EN">
+<contactref element="U$1" pad="P$13"/>
+</signal>
+<signal name="AO_GPIO_0_WAKE">
+<contactref element="U$1" pad="P$4"/>
+</signal>
 </signals>
 </board>
 </drawing>
