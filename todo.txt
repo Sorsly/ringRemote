@@ -2,17 +2,8 @@
 
 !!general
 
-*add a connector to interface with ring
-**likely microusb (small enough?)
-**functions
-***programming
-****might be able to program atblc via host mcu, so only need to be able to program host mcu
-***charging
-
-*choose some pins for pushbuttons
-**assume only 4 buttons req rn
-*determine interconnect for pushbuttons
-**eg wires? another connector?
+*may need to move pushbuttons to atbtlc because I need at least 2 pins for...?
+**not sure why. i think it was programming, but now that's unclear
 
 
 !!power
@@ -32,3 +23,20 @@ space, should be rarely used if battery life is good)
 !!mech
 
 *cad a packaging
+
+
+
+
+!done
+
+*add a connector to interface with ring
+**likely microusb (small enough?)
+**functions
+***programming
+****might be able to program atblc via host mcu, so only need to be able to program host mcu
+***charging
+
+*choose some pins for pushbuttons
+**assume only 4 buttons req rn
+*determine interconnect for pushbuttons
+**eg wires? another connector?
