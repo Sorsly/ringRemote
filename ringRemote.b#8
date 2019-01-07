@@ -632,6 +632,7 @@ design rules under a new name.</description>
 <contactref element="U$3" pad="P$1"/>
 <contactref element="C7" pad="2"/>
 <contactref element="U$4" pad="P$2"/>
+<contactref element="U$5" pad="P$2"/>
 <wire x1="21.59" y1="17.505" x2="25.4" y2="17.505" width="0" layer="19" extent="1-1"/>
 <wire x1="19.51" y1="15.315" x2="21.59" y2="17.505" width="0" layer="19" extent="1-1"/>
 <wire x1="16.51" y1="13.695" x2="19.51" y2="15.315" width="0" layer="19" extent="1-1"/>
@@ -649,7 +650,8 @@ design rules under a new name.</description>
 <wire x1="24.247" y1="8.86" x2="18.51" y2="11.125" width="0" layer="19" extent="1-1"/>
 <wire x1="2.95" y1="-3.05" x2="7.67" y2="2.5" width="0" layer="19" extent="1-1"/>
 <wire x1="-3" y1="-4.35" x2="2.95" y2="-3.05" width="0" layer="19" extent="1-1"/>
-<wire x1="-14" y1="-14.275" x2="-3" y2="-4.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-13.75" y1="-7.95" x2="-3" y2="-4.35" width="0" layer="19" extent="1-1"/>
+<wire x1="-14" y1="-14.275" x2="-13.75" y2="-7.95" width="0" layer="19" extent="1-1"/>
 </signal>
 <signal name="VBAT">
 <contactref element="U$2" pad="P$27"/>
@@ -756,9 +758,6 @@ design rules under a new name.</description>
 <contactref element="R7" pad="1"/>
 <contactref element="U$5" pad="P$1"/>
 <wire x1="-7.9" y1="-5" x2="-12.25" y2="-7.95" width="0" layer="19" extent="1-1"/>
-</signal>
-<signal name="N$13">
-<contactref element="U$5" pad="P$2"/>
 </signal>
 <signal name="VUSB">
 <contactref element="U$4" pad="P$3"/>

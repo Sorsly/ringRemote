@@ -571,7 +571,7 @@ design rules under a new name.</description>
 <attribute name="VERSION" value="v01" x="0" y="-6" size="1.778" layer="27" display="off"/>
 </element>
 <element name="U$4" library="ringRemote" package="SOT-23-THIN" value="TLV700" x="-3" y="-3"/>
-<element name="R7" library="ringRemote" package="0805" value=" " x="-7" y="-5">
+<element name="R7" library="ringRemote" package="0805" value="1.8k" x="-7" y="-5">
 <attribute name="PROD_ID" value=" " x="-7" y="-5" size="1.778" layer="27" display="off"/>
 </element>
 <element name="D2" library="ringRemote" package="PANASONIC_DB2J31400L_0" value="PANASONIC_DB2J31400LPANASONIC_DB2J31400L_0_0" x="-6" y="-10">
