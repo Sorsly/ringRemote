@@ -2,8 +2,11 @@
 
 !!general
 
-*may need to move pushbuttons to atbtlc because I need at least 2 pins for...?
-**not sure why. i think it was programming, but now that's unclear
+*may need to move pushbuttons to atbtlc because I need 2 pins
+**either hw pins 11&12 or 19&20
+***move the HMI stuff to any of the LP_GPIO pins
+**only need to program max32660 because atbtlc has no flash (treat as a slave device)
+**
 
 
 !!power
@@ -40,3 +43,7 @@ space, should be rarely used if battery life is good)
 **assume only 4 buttons req rn
 *determine interconnect for pushbuttons
 **eg wires? another connector?
+
+*programming
+**(edit: no need) for freeing up i2c to program max32660
+***likely need a usb to i2c interface chip

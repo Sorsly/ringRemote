@@ -1815,7 +1815,7 @@ wakemonitor needs to be irq</text>
 for tuning the crystal osc, so...
 can I be lazy and not include
 c5 and c6?</text>
-<text x="38.1" y="15.24" size="1.27" layer="97" align="bottom-right">not adding a sch part,
+<text x="48.26" y="101.6" size="1.27" layer="97" align="bottom-right">not adding a sch part,
 but there are hypothetical
 switches here. will probably
 create some vias with some conductive
@@ -1861,18 +1861,18 @@ with conductive glue</text>
 <instance part="GND8" gate="G$1" x="121.92" y="114.3"/>
 <instance part="R3" gate="G$1" x="99.06" y="30.48" rot="R270"/>
 <instance part="GND9" gate="G$1" x="99.06" y="12.7"/>
-<instance part="R1" gate="G$1" x="30.48" y="55.88" rot="R180"/>
-<instance part="R4" gate="G$1" x="43.18" y="53.34" rot="R180"/>
-<instance part="R5" gate="G$1" x="30.48" y="38.1" rot="R180"/>
-<instance part="R6" gate="G$1" x="43.18" y="35.56" rot="R180"/>
-<instance part="GND3" gate="G$1" x="38.1" y="30.48"/>
-<instance part="GND10" gate="G$1" x="25.4" y="33.02"/>
-<instance part="GND11" gate="G$1" x="25.4" y="50.8"/>
-<instance part="GND12" gate="G$1" x="38.1" y="48.26"/>
-<instance part="SUPPLY4" gate="G$1" x="25.4" y="60.96"/>
-<instance part="SUPPLY5" gate="G$1" x="38.1" y="58.42"/>
-<instance part="SUPPLY6" gate="G$1" x="25.4" y="43.18"/>
-<instance part="SUPPLY7" gate="G$1" x="38.1" y="40.64"/>
+<instance part="R1" gate="G$1" x="33.02" y="152.4" rot="R180"/>
+<instance part="R4" gate="G$1" x="45.72" y="149.86" rot="R180"/>
+<instance part="R5" gate="G$1" x="33.02" y="129.54" rot="R180"/>
+<instance part="R6" gate="G$1" x="45.72" y="127" rot="R180"/>
+<instance part="GND3" gate="G$1" x="40.64" y="121.92"/>
+<instance part="GND10" gate="G$1" x="27.94" y="124.46"/>
+<instance part="GND11" gate="G$1" x="27.94" y="147.32"/>
+<instance part="GND12" gate="G$1" x="40.64" y="144.78"/>
+<instance part="SUPPLY4" gate="G$1" x="27.94" y="157.48"/>
+<instance part="SUPPLY5" gate="G$1" x="40.64" y="154.94"/>
+<instance part="SUPPLY6" gate="G$1" x="27.94" y="134.62"/>
+<instance part="SUPPLY7" gate="G$1" x="40.64" y="132.08"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
 </instances>
@@ -1968,22 +1968,22 @@ with conductive glue</text>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="G$1" pin="3.3V"/>
-<wire x1="38.1" y1="35.56" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="127" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="G$1" pin="3.3V"/>
-<wire x1="25.4" y1="38.1" x2="25.4" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="129.54" x2="27.94" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
 <pinref part="GND11" gate="G$1" pin="3.3V"/>
-<wire x1="25.4" y1="55.88" x2="25.4" y2="53.34" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="152.4" x2="27.94" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
 <pinref part="GND12" gate="G$1" pin="3.3V"/>
-<wire x1="38.1" y1="53.34" x2="38.1" y2="50.8" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="149.86" x2="40.64" y2="147.32" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="N$4" class="0">
@@ -2103,34 +2103,6 @@ with conductive glue</text>
 <label x="152.4" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$6" class="0">
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<pinref part="U$1" gate="G$1" pin="SWDIOALT"/>
-<wire x1="48.26" y1="53.34" x2="50.8" y2="53.34" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$7" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="SWDCLKALT"/>
-<wire x1="50.8" y1="55.88" x2="35.56" y2="55.88" width="0.1524" layer="91"/>
-<pinref part="R1" gate="G$1" pin="1"/>
-</segment>
-</net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="P0.3"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="38.1" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="P0.2"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="MAXRST" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RSTN"/>
@@ -2158,6 +2130,90 @@ with conductive glue</text>
 <label x="68.58" y="83.82" size="1.778" layer="95"/>
 <wire x1="63.5" y1="83.82" x2="73.66" y2="83.82" width="0.1524" layer="91"/>
 <junction x="63.5" y="83.82"/>
+</segment>
+</net>
+<net name="PB1" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="LP_GPIO_14"/>
+<wire x1="154.94" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
+<label x="152.4" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R1" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
+<label x="53.34" y="152.4" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="PB2" class="0">
+<segment>
+<pinref part="U$2" gate="G$1" pin="LP_GPIO_15"/>
+<wire x1="154.94" y1="137.16" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
+<label x="152.4" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
+<label x="53.34" y="149.86" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2C0_SCL" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDIOALT"/>
+<wire x1="50.8" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
+<label x="48.26" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="210.82" y1="60.96" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
+<label x="210.82" y="60.96" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="I2C0_SDA" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDCLKALT"/>
+<wire x1="50.8" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
+<label x="48.26" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+<segment>
+<wire x1="210.82" y1="63.5" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
+<label x="210.82" y="63.5" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SWDCLK" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDCLK"/>
+<wire x1="50.8" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+<label x="48.26" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SWDIO" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDIO"/>
+<wire x1="50.8" y1="58.42" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
+<label x="48.26" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PB3" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="129.54" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
+<label x="53.34" y="129.54" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.3"/>
+<wire x1="50.8" y1="38.1" x2="48.26" y2="38.1" width="0.1524" layer="91"/>
+<label x="48.26" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PB4" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
+<label x="53.34" y="127" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.2"/>
+<wire x1="50.8" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
+<label x="48.26" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>
@@ -2212,6 +2268,37 @@ with conductive glue</text>
 <wire x1="78.74" y1="116.84" x2="78.74" y2="114.3" width="0.1524" layer="91"/>
 <pinref part="GND16" gate="G$1" pin="3.3V"/>
 <label x="78.74" y="114.3" size="1.27" layer="95" rot="R90"/>
+</segment>
+<segment>
+<pinref part="J1" gate="G$0" pin="5"/>
+<wire x1="162.56" y1="104.14" x2="165.1" y2="104.14" width="0.1524" layer="91"/>
+<pinref part="GND17" gate="G$1" pin="3.3V"/>
+<pinref part="J1" gate="G$0" pin="MNT_1"/>
+<wire x1="165.1" y1="104.14" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
+<wire x1="162.56" y1="99.06" x2="165.1" y2="99.06" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="99.06" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$0" pin="MNT_6"/>
+<wire x1="165.1" y1="93.98" x2="165.1" y2="88.9" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="88.9" x2="165.1" y2="83.82" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="83.82" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="78.74" x2="165.1" y2="73.66" width="0.1524" layer="91"/>
+<wire x1="165.1" y1="73.66" x2="162.56" y2="73.66" width="0.1524" layer="91"/>
+<pinref part="J1" gate="G$0" pin="MNT_5"/>
+<wire x1="162.56" y1="78.74" x2="165.1" y2="78.74" width="0.1524" layer="91"/>
+<junction x="165.1" y="78.74"/>
+<pinref part="J1" gate="G$0" pin="MNT_4"/>
+<wire x1="162.56" y1="83.82" x2="165.1" y2="83.82" width="0.1524" layer="91"/>
+<junction x="165.1" y="83.82"/>
+<pinref part="J1" gate="G$0" pin="MNT_3"/>
+<wire x1="162.56" y1="88.9" x2="165.1" y2="88.9" width="0.1524" layer="91"/>
+<junction x="165.1" y="88.9"/>
+<pinref part="J1" gate="G$0" pin="MNT_2"/>
+<wire x1="162.56" y1="93.98" x2="165.1" y2="93.98" width="0.1524" layer="91"/>
+<junction x="165.1" y="93.98"/>
+<junction x="165.1" y="99.06"/>
+<wire x1="165.1" y1="99.06" x2="165.1" y2="104.14" width="0.1524" layer="91"/>
+<junction x="165.1" y="104.14"/>
+<label x="165.1" y="104.14" size="1.27" layer="95"/>
 </segment>
 </net>
 <net name="MAXRST" class="0">
@@ -2275,13 +2362,6 @@ with conductive glue</text>
 <wire x1="78.74" y1="129.54" x2="78.74" y2="127" width="0.1524" layer="91"/>
 <pinref part="U$5" gate="G$1" pin="+"/>
 <label x="78.74" y="127" size="1.27" layer="95" rot="R90"/>
-</segment>
-</net>
-<net name="3.3V" class="0">
-<segment>
-<pinref part="J1" gate="G$0" pin="5"/>
-<wire x1="162.56" y1="104.14" x2="170.18" y2="104.14" width="0.1524" layer="91"/>
-<pinref part="GND17" gate="G$1" pin="3.3V"/>
 </segment>
 </net>
 <net name="D-" class="0">
