@@ -1863,16 +1863,16 @@ with conductive glue</text>
 <instance part="GND9" gate="G$1" x="99.06" y="12.7"/>
 <instance part="R1" gate="G$1" x="33.02" y="152.4" rot="R180"/>
 <instance part="R4" gate="G$1" x="45.72" y="149.86" rot="R180"/>
-<instance part="R5" gate="G$1" x="30.48" y="38.1" rot="R180"/>
-<instance part="R6" gate="G$1" x="43.18" y="35.56" rot="R180"/>
-<instance part="GND3" gate="G$1" x="38.1" y="30.48"/>
-<instance part="GND10" gate="G$1" x="25.4" y="33.02"/>
+<instance part="R5" gate="G$1" x="33.02" y="129.54" rot="R180"/>
+<instance part="R6" gate="G$1" x="45.72" y="127" rot="R180"/>
+<instance part="GND3" gate="G$1" x="40.64" y="121.92"/>
+<instance part="GND10" gate="G$1" x="27.94" y="124.46"/>
 <instance part="GND11" gate="G$1" x="27.94" y="147.32"/>
 <instance part="GND12" gate="G$1" x="40.64" y="144.78"/>
 <instance part="SUPPLY4" gate="G$1" x="27.94" y="157.48"/>
 <instance part="SUPPLY5" gate="G$1" x="40.64" y="154.94"/>
-<instance part="SUPPLY6" gate="G$1" x="25.4" y="43.18"/>
-<instance part="SUPPLY7" gate="G$1" x="38.1" y="40.64"/>
+<instance part="SUPPLY6" gate="G$1" x="27.94" y="134.62"/>
+<instance part="SUPPLY7" gate="G$1" x="40.64" y="132.08"/>
 <instance part="FRAME1" gate="G$1" x="0" y="0"/>
 <instance part="FRAME1" gate="V" x="147.32" y="0"/>
 </instances>
@@ -1968,12 +1968,12 @@ with conductive glue</text>
 <segment>
 <pinref part="R6" gate="G$1" pin="2"/>
 <pinref part="GND3" gate="G$1" pin="3.3V"/>
-<wire x1="38.1" y1="35.56" x2="38.1" y2="33.02" width="0.1524" layer="91"/>
+<wire x1="40.64" y1="127" x2="40.64" y2="124.46" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R5" gate="G$1" pin="2"/>
 <pinref part="GND10" gate="G$1" pin="3.3V"/>
-<wire x1="25.4" y1="38.1" x2="25.4" y2="35.56" width="0.1524" layer="91"/>
+<wire x1="27.94" y1="129.54" x2="27.94" y2="127" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="R1" gate="G$1" pin="2"/>
@@ -2103,20 +2103,6 @@ with conductive glue</text>
 <label x="152.4" y="147.32" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
-<net name="N$8" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="P0.3"/>
-<pinref part="R5" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="38.1" x2="35.56" y2="38.1" width="0.1524" layer="91"/>
-</segment>
-</net>
-<net name="N$9" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="P0.2"/>
-<pinref part="R6" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
-</segment>
-</net>
 <net name="MAXRST" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="RSTN"/>
@@ -2190,6 +2176,44 @@ with conductive glue</text>
 <segment>
 <wire x1="60.96" y1="121.92" x2="58.42" y2="121.92" width="0.1524" layer="91"/>
 <label x="60.96" y="121.92" size="1.27" layer="95" xref="yes"/>
+</segment>
+</net>
+<net name="SWDCLK" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDCLK"/>
+<wire x1="50.8" y1="60.96" x2="48.26" y2="60.96" width="0.1524" layer="91"/>
+<label x="48.26" y="60.96" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="SWDIO" class="0">
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDIO"/>
+<wire x1="50.8" y1="58.42" x2="48.26" y2="58.42" width="0.1524" layer="91"/>
+<label x="48.26" y="58.42" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PB3" class="0">
+<segment>
+<pinref part="R5" gate="G$1" pin="1"/>
+<wire x1="38.1" y1="129.54" x2="53.34" y2="129.54" width="0.1524" layer="91"/>
+<label x="53.34" y="129.54" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.3"/>
+<wire x1="50.8" y1="38.1" x2="48.26" y2="38.1" width="0.1524" layer="91"/>
+<label x="48.26" y="38.1" size="1.27" layer="95" rot="R180" xref="yes"/>
+</segment>
+</net>
+<net name="PB4" class="0">
+<segment>
+<pinref part="R6" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="127" x2="53.34" y2="127" width="0.1524" layer="91"/>
+<label x="53.34" y="127" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="P0.2"/>
+<wire x1="50.8" y1="35.56" x2="48.26" y2="35.56" width="0.1524" layer="91"/>
+<label x="48.26" y="35.56" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 </nets>

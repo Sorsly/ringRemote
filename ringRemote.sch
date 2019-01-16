@@ -2135,48 +2135,26 @@ with conductive glue</text>
 </net>
 <net name="PB1" class="0">
 <segment>
-<pinref part="U$2" gate="G$1" pin="LP_GPIO_14"/>
-<wire x1="154.94" y1="139.7" x2="152.4" y2="139.7" width="0.1524" layer="91"/>
-<label x="152.4" y="139.7" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
 <pinref part="R1" gate="G$1" pin="1"/>
 <wire x1="38.1" y1="152.4" x2="53.34" y2="152.4" width="0.1524" layer="91"/>
 <label x="53.34" y="152.4" size="1.27" layer="95" xref="yes"/>
 </segment>
-</net>
-<net name="PB2" class="0">
-<segment>
-<pinref part="U$2" gate="G$1" pin="LP_GPIO_15"/>
-<wire x1="154.94" y1="137.16" x2="152.4" y2="137.16" width="0.1524" layer="91"/>
-<label x="152.4" y="137.16" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<pinref part="R4" gate="G$1" pin="1"/>
-<wire x1="50.8" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
-<label x="53.34" y="149.86" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="I2C0_SCL" class="0">
-<segment>
-<pinref part="U$1" gate="G$1" pin="SWDIOALT"/>
-<wire x1="50.8" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
-<label x="48.26" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
-</segment>
-<segment>
-<wire x1="210.82" y1="60.96" x2="208.28" y2="60.96" width="0.1524" layer="91"/>
-<label x="210.82" y="60.96" size="1.27" layer="95" xref="yes"/>
-</segment>
-</net>
-<net name="I2C0_SDA" class="0">
 <segment>
 <pinref part="U$1" gate="G$1" pin="SWDCLKALT"/>
 <wire x1="50.8" y1="55.88" x2="48.26" y2="55.88" width="0.1524" layer="91"/>
 <label x="48.26" y="55.88" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
+</net>
+<net name="PB2" class="0">
 <segment>
-<wire x1="210.82" y1="63.5" x2="208.28" y2="63.5" width="0.1524" layer="91"/>
-<label x="210.82" y="63.5" size="1.27" layer="95" xref="yes"/>
+<pinref part="R4" gate="G$1" pin="1"/>
+<wire x1="50.8" y1="149.86" x2="53.34" y2="149.86" width="0.1524" layer="91"/>
+<label x="53.34" y="149.86" size="1.27" layer="95" xref="yes"/>
+</segment>
+<segment>
+<pinref part="U$1" gate="G$1" pin="SWDIOALT"/>
+<wire x1="50.8" y1="53.34" x2="48.26" y2="53.34" width="0.1524" layer="91"/>
+<label x="48.26" y="53.34" size="1.27" layer="95" rot="R180" xref="yes"/>
 </segment>
 </net>
 <net name="SWDCLK" class="0">
@@ -2221,6 +2199,11 @@ with conductive glue</text>
 </sheet>
 <sheet>
 <plain>
+<text x="185.42" y="104.14" size="1.27" layer="97">I will replace microusb w/
+a tiny ckt (board2board?)
+will need to interface with
+debugger that has an actual
+microusb on it</text>
 </plain>
 <instances>
 <instance part="U$3" gate="G$1" x="25.4" y="101.6"/>

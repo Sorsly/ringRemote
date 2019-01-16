@@ -46,4 +46,6 @@ space, should be rarely used if battery life is good)
 
 *programming
 **(edit: no need) for freeing up i2c to program max32660
+***however, possibly leave tp for i2c in case they're needed (vias, so you can
+solder headers?)
 ***likely need a usb to i2c interface chip
