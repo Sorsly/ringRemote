@@ -1,27 +1,19 @@
 !ringRemote todos
 
 !!general
+*add castellated vias only for battery
+**castellation will then have overlapping panelization holes for separation
+**this is instead of requiring:
+***a flex circuit (which would be difficult)
+***slimstack board to board connector
 
-*may need to move pushbuttons to atbtlc because I need 2 pins
-**either hw pins 11&12 or 19&20
-***move the HMI stuff to any of the LP_GPIO pins
-**only need to program max32660 because atbtlc has no flash (treat as a slave device)
-**
+!!programming
+*add vias for castellation
 
 
 !!power
-
-*add battery supervisor
-**according to graph on datasheet of chosen battery (ML-621S), full capacity is exhausted at ~2.25V. choosing supervisor based on this.
-**nanopower line of supervisors from maxim: 23 suffix is ideal (2.313V nom)
-***actually, expensive. found a cheaper one thats smaller too, slightly more
-power. tps3839g25
-
-*likely create a battery charge circuit as a separate device (save package
-space, should be rarely used if battery life is good)
-**edit: the charging guide for hte battery I chose is saying I can just use a regulator, resistor, and diode. might put it on the ring after all
-***depending on space constraints and efficiency, may opt for a pmic again.
-**stretch goal is to incorporate an energy harvest mechanism
+*check if 0201 passives are capable of handling currents
+*check if any components can be shrunk (specifically maybe find a pmic for charging)
 
 !!mech
 
@@ -45,7 +37,22 @@ space, should be rarely used if battery life is good)
 **eg wires? another connector?
 
 *programming
-**(edit: no need) for freeing up i2c to program max32660
-***however, possibly leave tp for i2c in case they're needed (vias, so you can
-solder headers?)
-***likely need a usb to i2c interface chip
+**no need for i2c
+
+*may need to move pushbuttons to atbtlc because I need 2 pins
+**either hw pins 11&12 or 19&20
+***move the HMI stuff to any of the LP_GPIO pins
+**only need to program max32660 because atbtlc has no flash (treat as a slave device)
+**
+
+*add battery supervisor
+**according to graph on datasheet of chosen battery (ML-621S), full capacity is exhausted at ~2.25V. choosing supervisor based on this.
+**nanopower line of supervisors from maxim: 23 suffix is ideal (2.313V nom)
+***actually, expensive. found a cheaper one thats smaller too, slightly more
+power. tps3839g25
+
+*likely create a battery charge circuit as a separate device (save package
+space, should be rarely used if battery life is good)
+**edit: the charging guide for hte battery I chose is saying I can just use a regulator, resistor, and diode. might put it on the ring after all
+***depending on space constraints and efficiency, may opt for a pmic again.
+**stretch goal is to incorporate an energy harvest mechanism
