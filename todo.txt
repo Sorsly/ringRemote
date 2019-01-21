@@ -1,18 +1,19 @@
 !ringRemote todos
 
 !!general
-*add castellated vias only for battery
-**castellation will then have overlapping panelization holes for separation
-**this is instead of requiring:
-***a flex circuit (which would be difficult)
-***slimstack board to board connector
+*HMI will be located near antenna area
+**will require castellation near antenna area
+**buttons will be their own circuit board past that area
+
+*need to switch to 4-layer because it's incredibly difficult to maintain width
+of board and route the pb traces
+**means I need to convert project to kicad
 
 !!programming
 *add vias for castellation
 
 
 !!power
-*check if 0201 passives are capable of handling currents
 *check if any components can be shrunk (specifically maybe find a pmic for charging)
 
 !!mech
@@ -56,3 +57,17 @@ space, should be rarely used if battery life is good)
 **edit: the charging guide for hte battery I chose is saying I can just use a regulator, resistor, and diode. might put it on the ring after all
 ***depending on space constraints and efficiency, may opt for a pmic again.
 **stretch goal is to incorporate an energy harvest mechanism
+
+!!power
+
+*check if 0201 passives are capable of handling currents
+
+
+!!castellation
+
+
+*add castellated vias only for battery
+**castellation will then have overlapping panelization holes for separation
+**this is instead of requiring:
+***a flex circuit (which would be difficult)
+***slimstack board to board connector
