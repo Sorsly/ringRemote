@@ -852,6 +852,8 @@ S 9150 5600 550  300
 U 5C488A08
 F0 "battery" 50
 F1 "battery.sch" 50
+F2 "VBAT" B R 9700 5700 50 
+F3 "GND" B R 9700 5800 50 
 $EndSheet
 Wire Wire Line
 	9800 5600 9800 5700
