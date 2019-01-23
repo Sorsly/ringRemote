@@ -3,7 +3,7 @@ EELAYER 26 0
 EELAYER END
 $Descr User 11821 8846
 encoding utf-8
-Sheet 1 1
+Sheet 1 2
 Title ""
 Date ""
 Rev ""
@@ -111,10 +111,6 @@ GND
 Wire Wire Line
 	8300 5600 8300 5700
 Text Label 8300 5700 1    50   ~ 0
-GND
-Wire Wire Line
-	9800 6100 9800 6200
-Text Label 9800 6200 1    50   ~ 0
 GND
 Wire Wire Line
 	4600 2400 4700 2400
@@ -301,10 +297,6 @@ Wire Wire Line
 	4600 2300 4700 2300
 Text Label 4700 2300 0    50   ~ 0
 VEXT
-Wire Wire Line
-	9800 5600 9800 5700
-Text Label 9800 5700 1    50   ~ 0
-VBAT
 $Comp
 L ringRemote-eagle-import:CRYSTAL-32.768KHZSMD-3.2X1.5 Y1
 U 1 0 7D89E2D8
@@ -535,17 +527,6 @@ F 2 "ringRemote:0805" H 9800 5400 50  0001 C CNN
 F 3 "" H 9800 5400 50  0001 C CNN
 	1    9800 5400
 	0    -1   -1   0   
-$EndComp
-$Comp
-L ringRemote-eagle-import:ML621S U$5
-U 1 0 BCE09641
-P 9800 5900
-F 0 "U$5" H 9800 6070 70  0000 C BNN
-F 1 "ML621S" H 9800 5730 70  0000 C TNN
-F 2 "ringRemote:ML621S" H 9800 5900 50  0001 C CNN
-F 3 "" H 9800 5900 50  0001 C CNN
-	1    9800 5900
-	0    1    1    0   
 $EndComp
 $Comp
 L ringRemote-eagle-import:CAPACITOR C7
@@ -809,17 +790,6 @@ F 3 "" H 8300 5700 50  0001 C CNN
 	1    0    0    -1  
 $EndComp
 $Comp
-L power:GND #PWR0120
-U 1 1 5C47FF65
-P 9800 6200
-F 0 "#PWR0120" H 9800 5950 50  0001 C CNN
-F 1 "GND" H 9805 6027 50  0000 C CNN
-F 2 "" H 9800 6200 50  0001 C CNN
-F 3 "" H 9800 6200 50  0001 C CNN
-	1    9800 6200
-	1    0    0    -1  
-$EndComp
-$Comp
 L power:GND #PWR0121
 U 1 1 5C480053
 P 8500 4100
@@ -877,4 +847,31 @@ F 3 "" H 9200 1700 50  0001 C CNN
 $EndComp
 Text Notes 7550 4650 0    50   ~ 0
 5V must come from J3 pad of eval board;\nsupplied VCC at 2x5 swd header is NOT 5V
+$Sheet
+S 9150 5600 550  300 
+U 5C488A08
+F0 "battery" 50
+F1 "battery.sch" 50
+F2 "VBAT" B R 9700 5700 50 
+F3 "GND" B R 9700 5800 50 
+$EndSheet
+Wire Wire Line
+	9800 5600 9800 5700
+Wire Wire Line
+	9800 5700 9700 5700
+Wire Wire Line
+	9700 5800 9800 5800
+Wire Wire Line
+	9800 5800 9800 6100
+$Comp
+L power:GND #PWR0120
+U 1 1 5C491D11
+P 9800 6100
+F 0 "#PWR0120" H 9800 5850 50  0001 C CNN
+F 1 "GND" H 9805 5927 50  0000 C CNN
+F 2 "" H 9800 6100 50  0001 C CNN
+F 3 "" H 9800 6100 50  0001 C CNN
+	1    9800 6100
+	1    0    0    -1  
+$EndComp
 $EndSCHEMATC
