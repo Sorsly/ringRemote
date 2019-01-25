@@ -1,7 +1,7 @@
 (export (version D)
   (design
     (source C:\Users\Sorsly\Documents\remote\ringRemote\kicad\ringRemote.sch)
-    (date "2019-01-23 19:06:35")
+    (date "2019-01-24 23:51:00")
     (tool "Eeschema (5.0.2)-1")
     (sheet (number 1) (name /) (tstamps /)
       (title_block

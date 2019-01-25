@@ -1,4 +1,5 @@
 EESchema Schematic File Version 4
+LIBS:ringRemote-cache
 EELAYER 26 0
 EELAYER END
 $Descr User 11821 8846
