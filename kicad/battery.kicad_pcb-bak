@@ -2,7 +2,7 @@
 
   (general
     (thickness 1.6)
-    (drawings 2)
+    (drawings 4)
     (tracks 8)
     (zones 0)
     (modules 1)
@@ -124,19 +124,10 @@
       (net 1 GND) (solder_mask_margin 0.0635))
   )
 
-  (dimension 13.000004 (width 0.3) (layer Dwgs.User)
-    (gr_text "13.000 mm" (at 149.089285 121.224946 359.9559263) (layer Dwgs.User)
-      (effects (font (size 1.5 1.5) (thickness 0.3)))
-    )
-    (feature1 (pts (xy 155.6 107.3) (xy 155.590449 119.716367)))
-    (feature2 (pts (xy 142.6 107.29) (xy 142.590449 119.706367)))
-    (crossbar (pts (xy 142.5909 119.119947) (xy 155.5909 119.129947)))
-    (arrow1a (pts (xy 155.5909 119.129947) (xy 154.463945 119.715501)))
-    (arrow1b (pts (xy 155.5909 119.129947) (xy 154.464848 118.54266)))
-    (arrow2a (pts (xy 142.5909 119.119947) (xy 143.716952 119.707234)))
-    (arrow2b (pts (xy 142.5909 119.119947) (xy 143.717855 118.534393)))
-  )
-  (gr_line (start 142.6011 107.3036) (end 155.6011 107.3036) (layer F.SilkS) (width 0.15) (tstamp 183A7440))
+  (gr_line (start 155.6011 115.25) (end 155.6011 107.3036) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 142.6011 115.25) (end 155.6011 115.25) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 142.6011 107.3036) (end 142.6011 115.25) (layer Edge.Cuts) (width 0.15))
+  (gr_line (start 142.6011 107.3036) (end 155.6011 107.3036) (layer Edge.Cuts) (width 0.15) (tstamp 183A7440))
 
   (via (at 152.49 107.3036) (size 0.854) (drill 0.6) (layers Top Bottom) (net 1))
   (segment (start 152.49 107.3036) (end 152.49 109.76) (width 0.5) (layer Top) (net 1))

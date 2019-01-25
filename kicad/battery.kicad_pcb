@@ -106,7 +106,7 @@
   )
 
   (module ringRemote:ML621S (layer Top) (tedit 0) (tstamp 5C47ECA7)
-    (at 151.5 111.5 270)
+    (at 151.5 111.3 270)
     (path /5C488A08/5C491E03)
     (fp_text reference U$5 (at 0 0 270) (layer F.SilkS) hide
       (effects (font (size 1.27 1.27) (thickness 0.15)))
