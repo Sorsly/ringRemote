@@ -750,7 +750,7 @@
   (gr_line (start 144.8 95.3) (end 152.3 95.3) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 144.8 93.48) (end 144.8 95.3) (layer Edge.Cuts) (width 0.15))
   (gr_line (start 155.6011 107.3036) (end 155.6011 93.48) (layer Edge.Cuts) (width 0.15) (tstamp 183A6C20))
-  (gr_line (start 144.8 93.48) (end 142.4011 93.48) (layer F.SilkS) (width 0.15) (tstamp 183A5D20))
+  (gr_line (start 144.8 93.48) (end 142.4011 93.48) (layer Edge.Cuts) (width 0.15) (tstamp 183A5D20))
   (gr_line (start 142.4011 93.5036) (end 142.4011 107.3036) (layer Edge.Cuts) (width 0.15) (tstamp 183A7080))
   (gr_line (start 142.4 107.3) (end 155.6011 107.3036) (layer Edge.Cuts) (width 0.15) (tstamp 183A7440))
 
