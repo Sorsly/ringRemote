@@ -62,10 +62,10 @@
 
 /***** Definitions *****/
 //reminder that all pins listed here are SOFTWARE, not HARDWARE
-#define PB1_PIN     PIN_9  
-#define PB2_PIN     PIN_8  
-#define PB3_PIN     PIN_3  
-#define PB4_PIN     PIN_2  
+#define PB1_PIN     PIN_9
+#define PB2_PIN     PIN_8
+#define PB3_PIN     PIN_3
+#define PB4_PIN     PIN_2
 #define THRESH      10      //ms
 #define TMR0        MXC_TMR0
 
@@ -74,9 +74,10 @@
 /***** Functions *****/
 
 bool debounce(bool *prevSt, int *tStart, bool currSt) {
-    if(currSt != *prevSt) {
-        TMR_Enable(TMR0);       //enables timer on change 
+    if(currSt != *prevSt) {     //change has occured
+        TMR_Enable(TMR0);       //enables timer on change
         *tStart = TMR_GetCount(TMR0);
+        *prevSt = currSt;
     } else {
         if((TMR_GetCount(TMR0) - *tStart) > THRESH) {
             *prevSt = currSt;
@@ -84,28 +85,82 @@ bool debounce(bool *prevSt, int *tStart, bool currSt) {
             TMR_Disable(TMR0);  //disables timer after settling
         }
     }
-        
+
     return currSt;
 }
+
+void debounce(bool press) {
+    if(press == true) {
+        on++;   //count time up
+        off = 0;
+        if(on > THRESH) {
+            if(output == false) {
+                //action
+                output = true;
+            }
+        }
+    } else {
+        off++;
+        on = 0;
+        if(off > THRESH) {
+            output = 0;
+            off = 0;
+        }
+    }
+}
+
+//inits atbtlc device
+void btInit() {
+
+}
+
+//tells atbtlc to send bytes
+void btTx() {
+    //TODO
+    
+}
+
+//timer interrupt
+void gpio_isr(void *cbdata)
+{
+
+    //TMR0_CN.ten = 1;    //enable timer
+    cbdata.ten = 1;
+    
+}
+
+
 int main(void)
 {
-    /*
-    gpio_cfg_t gpio_in;
-    gpio_cfg_t gpio_out;
-    gpio_cfg_t gpio_interrupt;
-    gpio_cfg_t gpio_interrupt_status;
-    */
-
     gpio_cfg_t pb1, pb2, pb3, pb4;
     bool fx1 = false;
     bool fx2 = false;
     bool fx3 = false;
     bool fx4 = false;
 
+    //int tElapsed;
+
+    //MXC_TMR0 init config
+    TMR0_CN.ten = 0;    //disable timer
+    TMR0_CN.tmode = 000b;    //one-shot mode
+    //TMR0_CN.pres3:TMR0_CN.pres    //set prescaler //TODO
+    TMR0_CMP = 10;
+    //use "TMR0_CN.ten = 1;" to enable timer
+
+
     pb1.port = PORT_0;
     pb1.mask = PB1_PIN;
     pb1.pad = GPIO_PAD_PULL_DOWN;
     pb1.func = GPIO_FUNC_IN;
+    GPIO_Config(&pb1);
+    
+    //GPIO_RegisterCallback(&pb1, gpio_isr, &tElapsed);
+    GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0_CN);
+    //GPIO_RegisterCallback(&pb1, gpio_isr);
+    
+    GPIO_IntConfig(&pb1, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+    GPIO_IntEnable(&pb1);
+    NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
 
     pb2.port = PORT_0;
     pb2.mask = PB2_PIN;
@@ -123,6 +178,18 @@ int main(void)
     pb4.func = GPIO_FUNC_IN;
 
     while(1) {
+        if(TMR_IntStatus(TMR0)) {   //check if TMR0 finished the cnt
+            //somehow pass which switch got pushed to the bt func
+            //GPIO_InGet(&pb1)
+
+            btTx();
+
+            //TMR_IntClear(TMR0);     //unnecessary because interrupt clears auto?
+        }
+        
+
+        //old code, not oriented for  
+        /***
         //read pb1
         if (GPIO_InGet(&pb1)) {
             fx1 = true;
@@ -152,9 +219,10 @@ int main(void)
         }
 
         if (fx1 || fx2 || fx3 || fx4) {
-            LED_On(0);
+            LED_On(0);  //just for the evalboard?
         } else {
             LED_Off(0);
         }
+        ***/
     }
 }

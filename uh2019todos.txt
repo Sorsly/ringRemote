@@ -1,0 +1,26 @@
+todos
+
+logistics
+o    generate ssh pair
+o    setup coding environ
+
+ringRemote
+    ring
+        debounce switch code (interupt-based???)
+/        timer setup
+        look at bt stack docs
+        code for bt stack
+        activity light
+    phone
+        10min research best app way
+        mate 9 development easy?
+        create hello world app
+        code basic functionality to talk to another bt device
+        mindmap some easy basic context feature stuff
+        add in functionality for features
+        
+        
+
+
+
+
