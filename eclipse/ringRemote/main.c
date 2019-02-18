@@ -120,6 +120,12 @@ void btInit() {
 //tells atbtlc to send bytes
 void btTx(int byte) {
     //TODO
+    for(int i=0; i<byte; i++) {
+        LED_On(0);  //just for the evalboard?
+        mxc_delay(MXC_DELAY_MSEC(500));
+        LED_Off(0);  //just for the evalboard?
+        mxc_delay(MXC_DELAY_MSEC(500));
+    }
     
 }
 
@@ -131,24 +137,8 @@ void gpio_isr(void *cbdata)
     TMR_Enable(TMR0);   //enable timer
 }
 
-
-int main(void)
-{
-//declarations
-    gpio_cfg_t pb1, pb2, pb3, pb4;
-    /*
-    bool fx1 = false;
-    bool fx2 = false;
-    bool fx3 = false;
-    bool fx4 = false;
-    */
-
-    //int tElapsed;
-
-
-    btInit();
-
-//MXC_TMR0 init config
+//timer init
+void tmrInit(void) {
     /*
     TMR0_CN.ten = 0;    //disable timer
     TMR0_CN.tmode = 000b;    //one-shot mode
@@ -183,38 +173,46 @@ int main(void)
     TMR_Config(TMR0, &tmr); //configure tmr as TMR0
 
     //use "TMR_Enable(TMR0);" to enable timer
+}
 
-
-//interrupt pin init (turn into function)TODO
-    pb1.port = PORT_0;
-    pb1.mask = PB1_PIN;
-    pb1.pad = GPIO_PAD_PULL_DOWN;
-    pb1.func = GPIO_FUNC_IN;
-    GPIO_Config(&pb1);
+//interrupt pin init
+void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+    pb->port = PORT_0;
+    pb->mask = pb_pin;
+    pb->pad = GPIO_PAD_PULL_DOWN;
+    pb->func = GPIO_FUNC_IN;
+    GPIO_Config(pb);
     
-    //GPIO_RegisterCallback(&pb1, gpio_isr, &tElapsed);
-    //GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
-    GPIO_RegisterCallback(&pb1, gpio_isr, NULL);
+    //GPIO_RegisterCallback(&pb, gpio_isr, &tElapsed);
+    //GPIO_RegisterCallback(&pb, gpio_isr, &TMR0);
+    GPIO_RegisterCallback(pb, gpio_isr, NULL);
     
-    GPIO_IntConfig(&pb1, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+    GPIO_IntConfig(pb, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
     
-    GPIO_IntEnable(&pb1);
+    GPIO_IntEnable(pb);
     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(PORT_0));
+}
 
-    pb2.port = PORT_0;
-    pb2.mask = PB2_PIN;
-    pb2.pad = GPIO_PAD_PULL_DOWN;
-    pb2.func = GPIO_FUNC_IN;
+int main(void) {
+//declarations
+    gpio_cfg_t pb1, pb2, pb3, pb4;
+    /*
+    bool fx1 = false;
+    bool fx2 = false;
+    bool fx3 = false;
+    bool fx4 = false;
+    */
 
-    pb3.port = PORT_0;
-    pb3.mask = PB3_PIN;
-    pb3.pad = GPIO_PAD_PULL_DOWN;
-    pb3.func = GPIO_FUNC_IN;
+    //int tElapsed;
 
-    pb4.port = PORT_0;
-    pb4.mask = PB4_PIN;
-    pb4.pad = GPIO_PAD_PULL_DOWN;
-    pb4.func = GPIO_FUNC_IN;
+    btInit();
+
+    tmrInit();
+
+    pbInit(&pb1, PB1_PIN);
+    pbInit(&pb2, PB2_PIN);
+    pbInit(&pb3, PB3_PIN);
+    pbInit(&pb4, PB4_PIN);
 
 //loop
     while(1) {

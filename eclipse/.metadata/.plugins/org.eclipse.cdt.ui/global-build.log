@@ -279,3 +279,292 @@ make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660Periph
 make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
 arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
   LD    /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ringRemote.elf 
+22:34:03 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+  LD    /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ringRemote.elf 
+22:39:05 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'pbInit':
+main.c:174:7: error: 'pb' is a pointer; did you mean to use '->'?
+     pb.port = PORT_0;
+       ^
+       ->
+main.c:175:7: error: 'pb' is a pointer; did you mean to use '->'?
+     pb.mask = pb_pin;
+       ^
+       ->
+main.c:176:7: error: 'pb' is a pointer; did you mean to use '->'?
+     pb.pad = GPIO_PAD_PULL_DOWN;
+       ^
+       ->
+main.c:177:7: error: 'pb' is a pointer; did you mean to use '->'?
+     pb.func = GPIO_FUNC_IN;
+       ^
+       ->
+main.c:178:17: warning: passing argument 1 of 'GPIO_Config' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_Config(&pb);
+                 ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:177:5: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ int GPIO_Config(const gpio_cfg_t *cfg);
+     ^~~~~~~~~~~
+main.c:182:27: warning: passing argument 1 of 'GPIO_RegisterCallback' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_RegisterCallback(&pb, gpio_isr, NULL);
+                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:278:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_RegisterCallback(const gpio_cfg_t *cfg, gpio_callback_fn callback, void *cbdata);
+      ^~~~~~~~~~~~~~~~~~~~~
+main.c:184:20: warning: passing argument 1 of 'GPIO_IntConfig' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntConfig(&pb, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:231:5: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ int GPIO_IntConfig(const gpio_cfg_t *cfg, gpio_int_mode_t mode, gpio_int_pol_t pol);
+     ^~~~~~~~~~~~~~
+main.c:186:20: warning: passing argument 1 of 'GPIO_IntEnable' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntEnable(&pb);
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:238:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_IntEnable(const gpio_cfg_t *cfg);
+      ^~~~~~~~~~~~~~
+main.c: In function 'main':
+main.c:206:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb1, PB1_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:207:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb2, PB2_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:208:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb3, PB3_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:209:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb4, PB4_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:39:42 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'pbInit':
+main.c:178:17: warning: passing argument 1 of 'GPIO_Config' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_Config(&pb);
+                 ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:177:5: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ int GPIO_Config(const gpio_cfg_t *cfg);
+     ^~~~~~~~~~~
+main.c:182:27: warning: passing argument 1 of 'GPIO_RegisterCallback' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_RegisterCallback(&pb, gpio_isr, NULL);
+                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:278:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_RegisterCallback(const gpio_cfg_t *cfg, gpio_callback_fn callback, void *cbdata);
+      ^~~~~~~~~~~~~~~~~~~~~
+main.c:184:20: warning: passing argument 1 of 'GPIO_IntConfig' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntConfig(&pb, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:231:5: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ int GPIO_IntConfig(const gpio_cfg_t *cfg, gpio_int_mode_t mode, gpio_int_pol_t pol);
+     ^~~~~~~~~~~~~~
+main.c:186:20: warning: passing argument 1 of 'GPIO_IntEnable' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntEnable(&pb);
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:238:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_IntEnable(const gpio_cfg_t *cfg);
+      ^~~~~~~~~~~~~~
+main.c: In function 'main':
+main.c:206:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb1, PB1_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:207:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb2, PB2_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:208:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb3, PB3_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:209:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb4, PB4_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:40:27 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'pbInit':
+main.c:182:27: warning: passing argument 1 of 'GPIO_RegisterCallback' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_RegisterCallback(&pb, gpio_isr, NULL);
+                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:278:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_RegisterCallback(const gpio_cfg_t *cfg, gpio_callback_fn callback, void *cbdata);
+      ^~~~~~~~~~~~~~~~~~~~~
+main.c:184:20: warning: passing argument 1 of 'GPIO_IntConfig' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntConfig(&pb, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:231:5: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ int GPIO_IntConfig(const gpio_cfg_t *cfg, gpio_int_mode_t mode, gpio_int_pol_t pol);
+     ^~~~~~~~~~~~~~
+main.c:186:20: warning: passing argument 1 of 'GPIO_IntEnable' from incompatible pointer type [-Wincompatible-pointer-types]
+     GPIO_IntEnable(&pb);
+                    ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:238:6: note: expected 'const gpio_cfg_t * {aka const struct <anonymous> *}' but argument is of type 'gpio_cfg_t ** {aka struct <anonymous> **}'
+ void GPIO_IntEnable(const gpio_cfg_t *cfg);
+      ^~~~~~~~~~~~~~
+main.c: In function 'main':
+main.c:206:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb1, PB1_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:207:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb2, PB2_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:208:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb3, PB3_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:209:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb4, PB4_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:40:47 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'main':
+main.c:206:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb1, PB1_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:207:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb2, PB2_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:208:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb3, PB3_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+main.c:209:12: error: incompatible type for argument 1 of 'pbInit'
+     pbInit(pb4, PB4_PIN);
+            ^~~
+main.c:173:6: note: expected 'gpio_cfg_t * {aka struct <anonymous> *}' but argument is of type 'gpio_cfg_t {aka struct <anonymous>}'
+ void pbInit(gpio_cfg_t *pb, int pb_pin) {   //check if pb_pin is actually int
+      ^~~~~~
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:41:48 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+  LD    /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ringRemote.elf 
+22:45:28 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'btTx':
+main.c:123:9: error: 'i' undeclared (first use in this function)
+     for(i=0; i<byte; i++) {
+         ^
+main.c:123:9: note: each undeclared identifier is reported only once for each function it appears in
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:45:44 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+  LD    /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ringRemote.elf 
+22:45:52 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+22:46:07 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
