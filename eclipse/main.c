@@ -111,11 +111,12 @@ void debounce(bool press) {
 
 //inits atbtlc device
 void btInit() {
+    //TODO
 
 }
 
 //tells atbtlc to send bytes
-void btTx() {
+void btTx(int byte) {
     //TODO
     
 }
@@ -123,15 +124,14 @@ void btTx() {
 //timer interrupt
 void gpio_isr(void *cbdata)
 {
-
-    //TMR0_CN.ten = 1;    //enable timer
-    cbdata.ten = 1;
-    
+    //cbdata.ten = 1;   //enable timer
+    TMR_Enable(TMR0);   //enable timer
 }
 
 
 int main(void)
 {
+//declarations
     gpio_cfg_t pb1, pb2, pb3, pb4;
     bool fx1 = false;
     bool fx2 = false;
@@ -140,14 +140,46 @@ int main(void)
 
     //int tElapsed;
 
-    //MXC_TMR0 init config
+    tmr_cfg_t tmr;
+
+    btInit();
+
+//MXC_TMR0 init config
+    /*
     TMR0_CN.ten = 0;    //disable timer
     TMR0_CN.tmode = 000b;    //one-shot mode
     //TMR0_CN.pres3:TMR0_CN.pres    //set prescaler //TODO
     TMR0_CMP = 10;
     //use "TMR0_CN.ten = 1;" to enable timer
+    */
+
+    unsigned clk_shift = 0;
+    uint64_t max_us;
+
+    /* Find the proper clock shift for timer */
+    do {
+        max_us = (uint64_t)((0xFFFFFFFFUL / ((uint64_t)PeripheralClock >> clk_shift++)) * 1000000UL);
+    } while (us > max_us);
+    clk_shift--;
+
+    TMR_Disable(TMR0);
+    TMR_Init(TMR0, 0, 0);   //prescaler is second arg
+    
+    //ms to ticks
+    uint32_t ticks; //ticks temp var
+    TMR_GetTicks(TMR0, THRESH, TMR_UNIT_MILLISEC, &ticks);  //get ticks from ms
+    
+    //define tmr
+    tmr.mode = TMR_MODE_ONESHOT;
+    tmr.cmp_cnt = ticks;    //timer mode?
+    tmr.pol = 0;    //compare register value in timer ticks. not used
+    
+    TMR_Config(TMR0, &tmr); //configure tmr as TMR0
+
+    //use "TMR_Enable(TMR0);" to enable timer
 
 
+//interrupt pin init (turn into function)TODO
     pb1.port = PORT_0;
     pb1.mask = PB1_PIN;
     pb1.pad = GPIO_PAD_PULL_DOWN;
@@ -155,10 +187,11 @@ int main(void)
     GPIO_Config(&pb1);
     
     //GPIO_RegisterCallback(&pb1, gpio_isr, &tElapsed);
-    GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0_CN);
-    //GPIO_RegisterCallback(&pb1, gpio_isr);
+    //GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0_CN);
+    GPIO_RegisterCallback(&pb1, gpio_isr);
     
     GPIO_IntConfig(&pb1, GPIO_INT_EDGE, GPIO_INT_BOTH); //reads on falling and rising
+    
     GPIO_IntEnable(&pb1);
     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
 
@@ -177,18 +210,25 @@ int main(void)
     pb4.pad = GPIO_PAD_PULL_DOWN;
     pb4.func = GPIO_FUNC_IN;
 
+//loop
     while(1) {
         if(TMR_IntStatus(TMR0)) {   //check if TMR0 finished the cnt
             //somehow pass which switch got pushed to the bt func
-            //GPIO_InGet(&pb1)
-
-            btTx();
+            if(GPIO_InGet(&pb1)) {
+                btTx(1);
+            } else if(GPIO_InGet(&pb2)) {
+                btTx(2);
+            } else if(GPIO_InGet(&pb3)) {
+                btTx(3);
+            } else if(GPIO_InGet(&pb4)) {
+                btTx(4);
+            }
 
             //TMR_IntClear(TMR0);     //unnecessary because interrupt clears auto?
         }
         
 
-        //old code, not oriented for  
+        //old code, not oriented for interrupts
         /***
         //read pb1
         if (GPIO_InGet(&pb1)) {
