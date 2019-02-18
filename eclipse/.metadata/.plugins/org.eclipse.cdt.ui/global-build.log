@@ -1,0 +1,281 @@
+22:10:11 **** Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c:92:6: error: conflicting types for 'debounce'
+ void debounce(bool press) {
+      ^~~~~~~~
+main.c:76:6: note: previous definition of 'debounce' was here
+ bool debounce(bool *prevSt, int *tStart, bool currSt) {
+      ^~~~~~~~
+main.c: In function 'debounce':
+main.c:94:9: error: 'on' undeclared (first use in this function)
+         on++;   //count time up
+         ^~
+main.c:94:9: note: each undeclared identifier is reported only once for each function it appears in
+main.c:95:9: error: 'off' undeclared (first use in this function)
+         off = 0;
+         ^~~
+main.c:97:16: error: 'output' undeclared (first use in this function)
+             if(output == false) {
+                ^~~~~~
+main.c: In function 'main':
+main.c:162:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:191:5: error: too few arguments to function 'GPIO_RegisterCallback'
+     GPIO_RegisterCallback(&pb1, gpio_isr);
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:278:6: note: declared here
+ void GPIO_RegisterCallback(const gpio_cfg_t *cfg, gpio_callback_fn callback, void *cbdata);
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:196:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+main.c:139:10: warning: unused variable 'fx4' [-Wunused-variable]
+     bool fx4 = false;
+          ^~~
+main.c:138:10: warning: unused variable 'fx3' [-Wunused-variable]
+     bool fx3 = false;
+          ^~~
+main.c:137:10: warning: unused variable 'fx2' [-Wunused-variable]
+     bool fx2 = false;
+          ^~~
+main.c:136:10: warning: unused variable 'fx1' [-Wunused-variable]
+     bool fx1 = false;
+          ^~~
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:13:01 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:195:5: error: too few arguments to function 'GPIO_RegisterCallback'
+     GPIO_RegisterCallback(&pb1, gpio_isr);
+     ^~~~~~~~~~~~~~~~~~~~~
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_pins.h:47:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:51,
+                 from main.c:49:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/gpio.h:278:6: note: declared here
+ void GPIO_RegisterCallback(const gpio_cfg_t *cfg, gpio_callback_fn callback, void *cbdata);
+      ^~~~~~~~~~~~~~~~~~~~~
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:200:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:15:46 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'gpio_isr':
+main.c:130:28: warning: dereferencing 'void *' pointer
+     TMR_Enable((tmr_cfg_t) *cbdata);   //enable timer
+                            ^~~~~~~
+main.c:130:5: error: invalid use of void expression
+     TMR_Enable((tmr_cfg_t) *cbdata);   //enable timer
+     ^~~~~~~~~~
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:194:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:200:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:15:58 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'gpio_isr':
+main.c:130:28: warning: dereferencing 'void *' pointer
+     TMR_Enable((tmr_cfg_t) *cbdata);   //enable timer
+                            ^~~~~~~
+main.c:130:5: error: invalid use of void expression
+     TMR_Enable((tmr_cfg_t) *cbdata);   //enable timer
+     ^~~~~~~~~~
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:194:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:200:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:17:09 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'gpio_isr':
+main.c:130:16: warning: passing argument 1 of 'TMR_Enable' from incompatible pointer type [-Wincompatible-pointer-types]
+     TMR_Enable((tmr_cfg_t*)cbdata);   //enable timer
+                ^
+In file included from main.c:52:0:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/tmr.h:144:6: note: expected 'mxc_tmr_regs_t * {aka struct <anonymous> *}' but argument is of type 'tmr_cfg_t * {aka struct <anonymous> *}'
+ void TMR_Enable(mxc_tmr_regs_t* tmr);
+      ^~~~~~~~~~
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:194:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:200:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:17:59 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'gpio_isr':
+main.c:130:16: warning: passing argument 1 of 'TMR_Enable' from incompatible pointer type [-Wincompatible-pointer-types]
+     TMR_Enable((tmr_cfg_t*)cbdata);   //enable timer
+                ^
+In file included from main.c:52:0:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/tmr.h:144:6: note: expected 'mxc_tmr_regs_t * {aka struct <anonymous> *}' but argument is of type 'tmr_cfg_t * {aka struct <anonymous> *}'
+ void TMR_Enable(mxc_tmr_regs_t* tmr);
+      ^~~~~~~~~~
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+In file included from c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/mxc_device.h:45:0,
+                 from c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/mxc_config.h:49,
+                 from main.c:49:
+main.c:200:48: error: 'GPIO_PORT_INTERRUPT_IN' undeclared (first use in this function)
+     NVIC_EnableIRQ((IRQn_Type)MXC_GPIO_GET_IRQ(GPIO_PORT_INTERRUPT_IN));
+                                                ^
+c:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include/max32660.h:226:43: note: in definition of macro 'MXC_GPIO_GET_IRQ'
+ #define MXC_GPIO_GET_IRQ(i)             ((i) == 0 ? GPIO0_IRQn : 0)
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:19:43 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'gpio_isr':
+main.c:130:16: warning: passing argument 1 of 'TMR_Enable' from incompatible pointer type [-Wincompatible-pointer-types]
+     TMR_Enable((tmr_cfg_t*)cbdata);   //enable timer
+                ^
+In file included from main.c:52:0:
+c:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include/tmr.h:144:6: note: expected 'mxc_tmr_regs_t * {aka struct <anonymous> *}' but argument is of type 'tmr_cfg_t * {aka struct <anonymous> *}'
+ void TMR_Enable(mxc_tmr_regs_t* tmr);
+      ^~~~~~~~~~
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:194:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:20:20 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'main':
+main.c:166:14: error: 'us' undeclared (first use in this function)
+     } while (us > max_us);
+              ^~
+main.c:166:14: note: each undeclared identifier is reported only once for each function it appears in
+main.c:194:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:25:18 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'main':
+main.c:163:24: warning: implicit declaration of function 'MS' [-Wimplicit-function-declaration]
+     unsigned long us = MS(THRESH);
+                        ^~
+main.c:195:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:26:18 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+main.c: In function 'main':
+main.c:195:43: error: lvalue required as unary '&' operand
+     GPIO_RegisterCallback(&pb1, gpio_isr, &TMR0);
+                                           ^
+make: *** [/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o] Error 1
+22:29:24 **** Incremental Build of configuration Debug for project ringRemote ****
+make ECLIPSE=1 all 
+make -C /C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver lib BUILD_DIR=/c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver
+make[1]: Entering directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+make[1]: Leaving directory `/C/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver'
+arm-none-eabi-gcc -mthumb -mcpu=cortex-m4 -mfloat-abi=hard -mfpu=fpv4-sp-d16 -Wa,-mimplicit-it=thumb -O1 -fsingle-precision-constant -ffunction-sections -fdata-sections -MD -Wall -Wdouble-promotion -Wno-format -c -fno-isolate-erroneous-paths-dereference -DTARGET=32660 -DTARGET_REV=0x4131 -g3 -ggdb -DDEBUG -DMXC_ASSERT_ENABLE -DRO_FREQ=80000000 -I. -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/Include -IC:/Maxim/Firmware/MAX32660/Libraries/Boards/EvKit_V1/../Include -IC:/Maxim/Firmware/MAX32660/Libraries/MAX32660PeriphDriver/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Device/Maxim/MAX32660/Include -IC:/Maxim/Firmware/MAX32660/Libraries/CMSIS/Include -o /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o main.c
+  LD    /c/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ringRemote.elf 
