@@ -66,6 +66,8 @@
 #define PB2_PIN     PIN_8
 #define PB3_PIN     PIN_3
 #define PB4_PIN     PIN_2
+#define LED_PIN     PIN_13
+
 #define THRESH      10      //ms
 #define TMR0        MXC_TMR0
 
@@ -119,13 +121,13 @@ void btInit() {
 
 //tells atbtlc to send bytes
 void btTx(int byte) {
-    //TODO
     for(int i=0; i<byte; i++) {
         LED_On(0);  //just for the evalboard?
-        mxc_delay(MXC_DELAY_MSEC(500));
+        mxc_delay(MXC_DELAY_MSEC(50));
         LED_Off(0);  //just for the evalboard?
-        mxc_delay(MXC_DELAY_MSEC(500));
+        mxc_delay(MXC_DELAY_MSEC(50));
     }
+    //TODO
     
 }
 

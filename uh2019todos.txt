@@ -6,8 +6,8 @@ o    setup coding environ
 
 ringRemote
     ring
-        debounce switch code (interupt-based???)
-/        timer setup
+o        debounce switch code (interupt-based???)
+o        timer setup
         look at bt stack docs
         code for bt stack
         activity light
