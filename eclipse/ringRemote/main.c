@@ -91,28 +91,6 @@ bool debounce(bool *prevSt, int *tStart, bool currSt) {
     return currSt;
 }
 
-/*
-void debounce(bool press) {
-    if(press == true) {
-        on++;   //count time up
-        off = 0;
-        if(on > THRESH) {
-            if(output == false) {
-                //action
-                output = true;
-            }
-        }
-    } else {
-        off++;
-        on = 0;
-        if(off > THRESH) {
-            output = 0;
-            off = 0;
-        }
-    }
-}
-*/
-
 //inits atbtlc device
 void btInit() {
     //TODO
@@ -232,43 +210,5 @@ int main(void) {
 
             //TMR_IntClear(TMR0);     //unnecessary because interrupt clears auto?
         }
-        
-
-        //old code, not oriented for interrupts
-        /*
-        //read pb1
-        if (GPIO_InGet(&pb1)) {
-            fx1 = true;
-        } else {
-            fx1 = false;
-        }
-
-        //read pb2
-        if (GPIO_InGet(&pb2)) {
-            fx2 = true;
-        } else {
-            fx2 = false;
-        }
-
-        //read pb3
-        if (GPIO_InGet(&pb3)) {
-            fx3 = true;
-        } else {
-            fx3 = false;
-        }
-
-        //read pb4
-        if (GPIO_InGet(&pb4)) {
-            fx4 = true;
-        } else {
-            fx4 = false;
-        }
-
-        if (fx1 || fx2 || fx3 || fx4) {
-            LED_On(0);  //just for the evalboard?
-        } else {
-            LED_Off(0);
-        }
-        */
     }
 }

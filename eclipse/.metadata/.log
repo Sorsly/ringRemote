@@ -50,3 +50,21 @@ org.eclipse.core.runtime.CoreException: Target not available.
 
 !ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-17 22:46:12.970
 !MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:31:53.335
+!MESSAGE openocd -c gdb_port 3333 -c telnet_port 4444 -s C:\Maxim\Toolchain/share/openocd/scripts -f interface/cmsis-dap.cfg -f target/max32660.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:31:54.393
+!MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:32:38.027
+!MESSAGE openocd -c gdb_port 3333 -c telnet_port 4444 -s C:\Maxim\Toolchain/share/openocd/scripts -f interface/cmsis-dap.cfg -f target/max32660.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:32:38.124
+!MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:33:23.075
+!MESSAGE openocd -c gdb_port 3333 -c telnet_port 4444 -s C:\Maxim\Toolchain/share/openocd/scripts -f interface/cmsis-dap.cfg -f target/max32660.cfg -c echo "Started by GNU ARM Eclipse"
+
+!ENTRY ilg.gnuarmeclipse.debug.gdbjtag.openocd 4 1 2019-02-18 21:33:23.170
+!MESSAGE arm-none-eabi-gdb --interpreter=mi2 --nx

@@ -1815,8 +1815,9 @@ LOAD c:/maxim/toolchain/bin/../lib/gcc/arm-none-eabi/6.3.1/thumb/v7e-m/fpv4-sp/h
  .text.gpio_isr
                 0x00000188       0x10 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
                 0x00000188                gpio_isr
- .text.btTx     0x00000198       0x30 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
+ .text.btTx     0x00000198       0x2e c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
                 0x00000198                btTx
+ *fill*         0x000001c6        0x2 
  .text.tmrInit  0x000001c8       0xc8 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
                 0x000001c8                tmrInit
  .text.pbInit   0x00000290       0x40 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
@@ -2710,19 +2711,19 @@ OUTPUT(c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/ring
  .debug_abbrev  0x00001cbf       0xb6 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(mxc_pins.o)
  .debug_abbrev  0x00001d75      0x1c0 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(tmr.o)
 
-.debug_loc      0x00000000     0x2c43
- .debug_loc     0x00000000      0x1c5 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
- .debug_loc     0x000001c5       0xdb c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/board.o
- .debug_loc     0x000002a0      0x2f7 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/stdio.o
- .debug_loc     0x00000597      0x11c c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/led.o
- .debug_loc     0x000006b3      0x1e2 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/pb.o
- .debug_loc     0x00000895       0x63 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/heap.o
- .debug_loc     0x000008f8       0x83 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/system_max32660.o
- .debug_loc     0x0000097b      0xcb0 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(uart.o)
- .debug_loc     0x0000162b      0x392 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(gpio.o)
- .debug_loc     0x000019bd      0x15d c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(mxc_delay.o)
- .debug_loc     0x00001b1a      0xc2e c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(mxc_sys.o)
- .debug_loc     0x00002748      0x4fb c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(tmr.o)
+.debug_loc      0x00000000     0x2c35
+ .debug_loc     0x00000000      0x1b7 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/main.o
+ .debug_loc     0x000001b7       0xdb c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/board.o
+ .debug_loc     0x00000292      0x2f7 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/stdio.o
+ .debug_loc     0x00000589      0x11c c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/led.o
+ .debug_loc     0x000006a5      0x1e2 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/pb.o
+ .debug_loc     0x00000887       0x63 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/heap.o
+ .debug_loc     0x000008ea       0x83 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/system_max32660.o
+ .debug_loc     0x0000096d      0xcb0 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(uart.o)
+ .debug_loc     0x0000161d      0x392 c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(gpio.o)
+ .debug_loc     0x000019af      0x15d c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(mxc_delay.o)
+ .debug_loc     0x00001b0c      0xc2e c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(mxc_sys.o)
+ .debug_loc     0x0000273a      0x4fb c:/Users/Sorsly/Documents/remote/ringRemote/eclipse/ringRemote/build/PeriphDriver/PeriphDriver.a(tmr.o)
 
 .debug_aranges  0x00000000      0x550
  .debug_aranges
