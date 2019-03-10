@@ -94,6 +94,10 @@ bool debounce(bool *prevSt, int *tStart, bool currSt) {
 //inits atbtlc device
 void btInit() {
     //TODO
+    at_ble_addr_t addr = {AT_BLE_ADDRESS_PUBLIC,
+        {} };   //add in a valid addr (not sure what that means)
+    at_ble_init();  //I think this is the actual init function. just need to include libraries
+    at_ble_addr_set(&addr);
 
 }
 
